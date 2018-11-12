@@ -39,7 +39,7 @@ document.getElementById('randomclass').addEventListener('click',generaterandomcl
 
 function generaterandomclass(){
 
-  var randomindex=Math.floor(Math.random()*13);
+  var randomindex=Math.floor(Math.random()*12);
   document.getElementById('d').value=classarray[randomindex];
 
 
