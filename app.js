@@ -14,7 +14,7 @@ function generaterandomrace(){
 
   document.getElementById('b').value=racearray[randomindex];
 
-
+  document.getElementById('a').value=randomindex;
 }
 
 //chose race
@@ -41,7 +41,7 @@ function generaterandomclass(){
 
   var randomindex=Math.floor(Math.random()*12);
   document.getElementById('d').value=classarray[randomindex];
-
+ document.getElementById('c').value=randomindex;
 
 }
 
