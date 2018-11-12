@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="app.js"></script>
+    
   </head>
   <body>
     <header>
@@ -23,41 +23,54 @@
         </div>
         <div id="main-content">
           <button id="randomize-all">Randomize All</button>
+          <form>
           <div id="race">
             <h1></h1>
-            <button class="random">Randomize</button>
-            <select>
-              <option>Dwarf</option>
-              <option>Elf</option>
-              <option>Halfling</option>
-              <option>Human</option>
-              <option>Dragonborn</option>
-              <option>Gnome</option>
-              <option>Half-Elf</option>
-              <option>Half-Orc</option>
-              <option>Tiefling</option>
+            
+            <button type='button'  id='randomrace'>Randomize</button>
+            <select class='' id='a' onchange="showrace();">
+              <option value='0'>Dwarf</option>
+              <option value='1'>Elf</option>
+              <option value='2'>Halfling</option>
+              <option value='3'>Human</option>
+              <option value='4'>Dragonborn</option>
+              <option value='5'>Gnome</option>
+              <option value='6'>Half-Elf</option>
+              <option value='7'>Half-Orc</option>
+              <option value='8'>Tiefling</option>
             </select>
-            <p class="description"></p>
           </div>
+              <fieldset>
+              <input type='text' name='name1' id='b'>
+            </fieldset>
+            </form>
+          
+            <form>
           <div id="class">
             <h1></h1>
-            <button class="random">Randomize</button>
-            <select>
-              <option>Barberian</option>
-              <option>Bard</option>
-              <option>Cleric</option>
-              <option>Druid</option>
-              <option>Fighter</option>
-              <option>Monk</option>
-              <option>Paladin</option>
-              <option>Ranger</option>
-              <option>Rogue</option>
-              <option>Sorcerer</option>
-              <option>Warlock</option>
-              <option>Wizard</option>
+            <button type="button" id='randomclass'>Randomize</button>
+            <select class='' id='c' onchange="showclass();">
+              <option value='0'>Barberian</option>
+              <option value='1'>Bard</option>
+              <option value='2'>Cleric</option>
+              <option value='3'>Druid</option>
+              <option value='4'>Fighter</option>
+              <option value='5'>Monk</option>
+              <option value='6'>Paladin</option>
+              <option value='7'>Ranger</option>
+              <option value='8'>Rogue</option>
+              <option value='9'>Sorcerer</option>
+              <option value='10'>Warlock</option>
+              <option value='11'>Wizard</option>
             </select>
-            <p class="description"></p>
+            <!-- <p class="description"></p> -->
           </div>
+          <fieldset>
+            <input type='text' name='name2' id='d'>
+           </fieldset>
+        </form>
+
+
           <div id="background">
             <h1></h1>
             <button class="random">Randomize</button>
@@ -108,5 +121,6 @@
       <div id="sidebar-img"></div>
     </main>
     <footer></footer>
+    <script src="app.js"></script>
   </body>
 </html>
