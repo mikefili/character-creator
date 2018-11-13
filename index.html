@@ -35,98 +35,92 @@
           <div id="top-button">
           <button id="randomize-all">Randomize All</button>
         </div>
-          <form>
-          <div id="race">
-            <h1></h1>
-            
-            <button type="button"  id="randomrace">Randomize</button>
-            <select class="" id="a" onchange="showrace();">
-              <option value='0'>Dwarf</option>
-              <option value='1'>Elf</option>
-              <option value='2'>Halfling</option>
-              <option value='3'>Human</option>
-              <option value='4'>Dragonborn</option>
-              <option value='5'>Gnome</option>
-              <option value='6'>Half-Elf</option>
-              <option value='7'>Half-Orc</option>
-              <option value='8'>Tiefling</option>
-            </select>
-          </div>
-              <fieldset>
-              <input type='text' name='name1' id='b'>
-            </fieldset>
-            </form>
-          
+          <div id="selection-content">
             <form>
-          <div id="class">
-            <h1></h1>
-            <button type="button" id='randomclass'>Randomize</button>
-            <select class='' id='c' onchange="showclass();">
-              <option value='0'>Barberian</option>
-              <option value='1'>Bard</option>
-              <option value='2'>Cleric</option>
-              <option value='3'>Druid</option>
-              <option value='4'>Fighter</option>
-              <option value='5'>Monk</option>
-              <option value='6'>Paladin</option>
-              <option value='7'>Ranger</option>
-              <option value='8'>Rogue</option>
-              <option value='9'>Sorcerer</option>
-              <option value='10'>Warlock</option>
-              <option value='11'>Wizard</option>
-            </select>
-            <!-- <p class="description"></p> -->
-          </div>
-          <fieldset>
-            <input type='text' name='name2' id='d'>
-           </fieldset>
-        </form>
-
-
-          <div id="background">
-            <h1></h1>
-            <button class="random">Randomize</button>
-            <select>
-              <option>Acolyte</option>
-              <option>Charlatan</option>
-              <option>Entertainer</option>
-              <option>Folk Hero</option>
-              <option>Guild Artisan</option>
-              <option>Hermit</option>
-              <option>Noble</option>
-              <option>Outlander</option>
-              <option>Pirate</option>
-              <option>Sage</option>
-              <option>Sailor</option>
-              <option>Soldier</option>
-              <option>Urchin</option>
-            </select>
-            <p class="description"></p>
-          </div>
-          <div id="alignment">
-           <button class="random" id='randomalignment'>Randomize</button>
-           <h1></h1>
-           <div id="lawful">
-              <button class='alel' id="lawful-good">Lawful Good</button>
-              <button class='alel' id="lawful-neutral">Lawful Neutral</button>
-              <button class='alel' id="lawful-evil">Lawful Evil</button>
-              <span class="align-description"></span>
-           </div>
-           <div id="neutral">
-              <button class='alel' id="neutral-good">Neutral Good</button>
-              <button class='alel' id="true-neutral">True Neutral</button>
-              <button class='alel' id="neutral-evil">Neutral Evil</button>
-              <span class="align-description"></span>
-           </div>
-           <div id="chaotic">
-              <button class='alel' id="chaotic-good">Chaotic Good</button>
-              <button class='alel' id="chaotic-neutral">Chaotic Neutral</button>
-              <button class='alel' id="chaotic-evil">Chaotic Evil</button>
-              <span class="align-description"></span>
-           </div>
-          </div>
-          <div id="submit">
-            <button>Submit & Customize!</button>
+              <div id="race">
+                <h1></h1>
+                <button type="button" class="random-buttons" id="randomrace">Randomize</button>
+                  <select class="" id="a" onchange="showrace();">
+                    <option value="0">Dwarf</option>
+                    <option value="1">Elf</option>
+                    <option value="2">Halfling</option>
+                    <option value="3">Human</option>
+                    <option value="4">Dragonborn</option>
+                    <option value="5">Gnome</option>
+                    <option value="6">Half-Elf</option>
+                    <option value="7">Half-Orc</option>
+                    <option value="8">Tiefling</option>
+                  </select>
+                <input type="text" name="name1" id="b">
+              </div>
+            </form>
+            
+            <div id="class">
+              <form>
+                <h1></h1>
+                  <button type="button" class="random-buttons" id="randomclass">Randomize</button>
+                    <select class="" id="c" onchange="showclass();">
+                      <option value="0">Barberian</option>
+                      <option value="1">Bard</option>
+                      <option value="2">Cleric</option>
+                      <option value="3">Druid</option>
+                      <option value="4">Fighter</option>
+                      <option value="5">Monk</option>
+                      <option value="6">Paladin</option>
+                      <option value="7">Ranger</option>
+                      <option value="8">Rogue</option>
+                      <option value="9">Sorcerer</option>
+                      <option value="10">Warlock</option>
+                      <option value="11">Wizard</option>
+                    </select>
+                <input type="text" name="name2" id="d">
+              </form>
+            </div>
+            <div id="background">
+              <h1></h1>
+              <button class="random-buttons">Randomize</button>
+              <select id="e">
+                <option>Acolyte</option>
+                <option>Charlatan</option>
+                <option>Entertainer</option>
+                <option>Folk Hero</option>
+                <option>Guild Artisan</option>
+                <option>Hermit</option>
+                <option>Noble</option>
+                <option>Outlander</option>
+                <option>Pirate</option>
+                <option>Sage</option>
+                <option>Sailor</option>
+                <option>Soldier</option>
+                <option>Urchin</option>
+              </select>
+              <p class="description"></p>
+            </div>
+            <div id="alignment">
+              <button class="random" class="random-buttons" id="randomalignment">Randomize</button>
+              <h1></h1>
+              <div id="lawful">
+                  <button class="alel" id="lawful-good">Lawful Good</button>
+                  <button class="alel" id="lawful-neutral">Lawful Neutral</button>
+                  <button class="alel" id="lawful-evil">Lawful Evil</button>
+                  <span class="align-description"></span>
+              </div>
+              <div id="neutral">
+                  <button class="alel" id="neutral-good">Neutral Good</button>
+                  <button class="alel" id="true-neutral">True Neutral</button>
+                  <button class="alel" id="neutral-evil">Neutral Evil</button>
+                  <span class="align-description"></span>
+              </div>
+              <div id="chaotic">
+                  <button class="alel" id="chaotic-good">Chaotic Good</button>
+                  <button class="alel" id="chaotic-neutral">Chaotic Neutral</button>
+                  <button class="alel" id="chaotic-evil">Chaotic Evil</button>
+                  <span class="align-description"></span>
+              </div>
+              <div id="submit">
+                <button>Submit & Customize!</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
