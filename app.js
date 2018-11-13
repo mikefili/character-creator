@@ -90,18 +90,9 @@ function generaterandomalignment(){
 
   var randomindexnumber=Math.floor(Math.random()*9);
   for(var i=0;i<buttonel.length;i++){
- 
+
     buttonel[i].setAttribute('isAct','0');
   }
- 
+
   buttonel[randomindexnumber].setAttribute('isAct','1');
 }
- 
-  
-
-
-
-
-
-
-
