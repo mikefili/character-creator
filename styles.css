@@ -134,7 +134,7 @@ header * nav {
   font-size: 1vw;
   background-color: lightgray;
   color: black;
-  margin-left: 4vw;
+  margin-left: 3.5vw;
   margin-right: 1vw;
   margin-top: 2vw;
   margin-bottom: 1vw;
@@ -142,6 +142,7 @@ header * nav {
 
 form {
   display: block;
+  height: 8vw;
 }
 
 #race {
@@ -149,11 +150,21 @@ form {
   border-radius: 0.5vw;
   background-color: rgba(200, 200, 200, 0.8);
   width: 20vw;
-  height: 8vw;
+  height: 10vw;
   float: left;
   margin-left: 5vw;
   margin-right: 5vw;
   margin-bottom: 1vw;
+}
+
+#race h1 {
+  font-size: 1.5vw;
+  width: 12vw;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1vw;
 }
 
 #a {
@@ -171,10 +182,20 @@ form {
   border-radius: 0.5vw;
   background-color: rgba(200, 200, 200, 0.8);
   width: 20vw;
-  height: 8vw;
+  height: 10vw;
   display: inline-block;
   margin-left: 5vw;
   margin-bottom: 1vw;
+}
+
+#class h1 {
+  font-size: 1.5vw;
+  width: 12vw;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1vw;
 }
 
 #c {
@@ -193,10 +214,20 @@ form {
   background-color: rgba(200, 200, 200, 0.8);
   display: block;
   width: 25vw;
-  height: 8vw;
+  height: 10vw;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1vw;
+}
+
+#background h1 {
+  font-size: 1.5vw;
+  width: 16vw;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1vw;
 }
 
 #e {
