@@ -37,27 +37,27 @@ function generaterandomclass() {
 function showclass() {
 
   var selectedrace = document.getElementById('c').value;
-  document.getElementById('d').value = racearray[selectedrace];
+  document.getElementById('d').value = classarray[selectedrace];
 }
 showclass();
 
 // Generate random class for third button randomize
 
-var thirdRandomClass = ['description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description'];
-document.getElementById('randombackground').addEventListener('click', generateThirdRandomClass);
+var backgroundarray = ['description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description', 'description'];
+document.getElementById('randombackground').addEventListener('click', generaterandombackground);
 
-function generateThirdRandomClass() {
+function generaterandombackground() {
 
   var randomindex = Math.floor(Math.random() * 13);
-  document.getElementById('third').value = thirdRandomClass[randomindex];
-  document.getElementById('generatethirdclass').value = randomindex;
+  document.getElementById('f').value = backgroundarray[randomindex];
+  document.getElementById('e').value = randomindex;
 
 }
 
 function showThirdClass() {
 
-  var randomThird = document.getElementById('generatethirdclass').value;
-  document.getElementById('third').value = racearray[randomThird];
+  var randomThird = document.getElementById('e').value;
+  document.getElementById('f').value = backgroundarray[randomThird];
 
 }
 
@@ -75,7 +75,7 @@ event.preventDefault();
 
   generaterandomrace();
   generaterandomclass();
-  generateThirdRandomClass();
+  generaterandombackground();
   generaterandomalignment();
 }
 
@@ -120,4 +120,18 @@ function generaterandomalignment() {
   }
 
   buttonel[randomindexnumber].setAttribute('isAct', '1');
+}
+
+
+
+
+function displayResults() {
+ 
+    var allOptions = document.getElementById("generatethirdclass").options.length;
+    var allOptions = document.getElementById("c").options.length;
+    var allOptions = document.getElementById("a").options.length;
+    var allOptions = document.getElementById("generatethirdclass").options.length;
+    document.getElementById("demo").innerHTML = "Found " + x + " options in the list.";
+
+
 }

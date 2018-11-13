@@ -86,7 +86,7 @@
           <div id="background">
             <h1></h1>
             <button type="button" id='randombackground'>Randomize</button>
-            <select class='' id="generatethirdclass" onchange="generateThirdRandomClass();">
+            <select class='' id="e" onchange="generateThirdRandomClass();">
               <option value='0' >Acolyte</option>
               <option value='1'>Charlatan</option>
               <option value='2'>Entertainer</option>
@@ -104,10 +104,9 @@
             <p class="description"></p>
           </div>
           <fieldset>
-            <input type='text' name='name3' id='third'>
+            <input type='text' name='name3' id='f'>
            </fieldset>
         </form>
-
 
 
           <div id="alignment">
@@ -133,7 +132,8 @@
            </div>
           </div>
           <div id="submit">
-            <button>Submit & Customize!</button>
+            <button onclick="displayResults()">Submit & Customize!</button>
+            <p id="demo"></p>
           </div>
         </div>
       </div>
