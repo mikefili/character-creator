@@ -41,3 +41,6 @@ footer {
   background-color: grey;
   outline: 1px solid red;
 }
+
+
+[isAct='1']{color:red;}
