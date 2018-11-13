@@ -1,6 +1,7 @@
 
-
-
+// var result=[];
+var raceoptions=[];
+var classoptions=[];
 
 var racearray=[
   'Description: Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs—these common threads unite all dwarves.',
@@ -24,19 +25,21 @@ function generaterandomrace(){
   document.getElementById('b').value=racearray[randomindex];
 
   document.getElementById('a').value=randomindex;
+
+  raceoptions.push(racearray[randomindex]);
 }
 
 //chose race
-
+// var racepick;
 function showrace(){
 
   var selectedrace=document.getElementById('a').value;
   document.getElementById('b').value=racearray[selectedrace];
-
-
+  // return racepick=racearray[selectedrace];
+  raceoptions.push(racearray[selectedrace]);
 }
-showrace();
 
+showrace();
 
 
 
@@ -66,18 +69,46 @@ function generaterandomclass(){
   document.getElementById('d').value=classarray[randomindex];
   document.getElementById('c').value=randomindex;
 
+  classoptions.push(classarray[randomindex]);
 }
 
 //chose class
 
 function showclass(){
 
-  var selectedrace=document.getElementById('c').value;
-  document.getElementById('d').value=racearray[selectedrace];
+  var selectedclass=document.getElementById('c').value;
+  document.getElementById('d').value=classarray[selectedclass];
 
+  classoptions.push(classarray[selectedclass]);
 
 }
 showclass();
+
+
+
+
+
+
+
+
+//randomly pick one button
+document.getElementById('randomalignment').addEventListener('click',generaterandomalignment);
+
+function generaterandomalignment(){
+
+  var buttonel=document.querySelectorAll('.alel');
+
+  var randomindexnumber=Math.floor(Math.random()*9);
+  for(var i=0;i<buttonel.length;i++){
+
+    buttonel[i].setAttribute('isAct','0');
+  }
+
+  buttonel[randomindexnumber].setAttribute('isAct','1');
+}
+
+
+
 
 
 //pick one button from 9 options;
@@ -104,18 +135,21 @@ for(var i=0;i<buttonel.length;i++){
 
 }
 
-//randomly pick one button
-document.getElementById('randomalignment').addEventListener('click',generaterandomalignment);
 
-function generaterandomalignment(){
 
-  var buttonel=document.querySelectorAll('.alel');
 
-  var randomindexnumber=Math.floor(Math.random()*9);
-  for(var i=0;i<buttonel.length;i++){
 
-    buttonel[i].setAttribute('isAct','0');
-  }
+//submit button
 
-  buttonel[randomindexnumber].setAttribute('isAct','1');
+document.getElementById('submitbutton').addEventListener('click',handlesubmit);
+
+function handlesubmit(e){
+
+  e.preventDefault();
+
+
+  alert('You chose Race: ' + raceoptions[raceoptions.length-1] + 'You chose class: '+ classoptions[classoptions.length-1]);
+
+
 }
+
