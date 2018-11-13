@@ -1,36 +1,126 @@
+body {
+  font-family: 'Alegreya', serif;
+  width: auto;
+  min-width: 1480px;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 header {
   width: 100%;
-  height: 100px;
+  height: 200px;
   background-color: grey;
+  font-family: 'Cinzel', serif;
   outline: 1px solid red;
 }
 
 header * nav {
   width: 220px;
   margin: auto;
-  margin-top: 25px;
 }
 
 #header-text {
   float: left;
+  text-align: center; 
+  line-height: 200px;
   width: 80%;
-  height: 100px;
-  font-size: 50px;
-  text-align: center;
-  outline: 1px solid red;
+  height: 100%;
+  font-size: 144px;
 }
 
 #header-socials {
   float: right;
-  display: block;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   width: 20%;
-  height: 100px;
-  outline: 1px solid red;
+  height: 100%;
 }
 
-#header-socials * img {
-  outline: 1px solid red;
+#header-socials img {
+  outline: 1px solid white;
   display: inline-block;
+  margin-right: 5px;
+}
+
+#header-socials img:last-child {
+  outline: 1px solid white;
+  display: inline-block;
+}
+
+#sidebar-nav {
+  float: left;
+  width: 200px;
+  height: 800px;
+  background-color: lightgray;
+  outline: 1px solid grey;
+}
+
+#content {
+  display: inline-block;
+  position: absolute;
+  padding-right: 200px;
+  min-width: 1000px;
+}
+
+#main-content {
+  display: block;
+  width: 100%;
+  min-width: 1000px;
+}
+
+#welcome-header {
+  font-size: 30px;
+  font-variant: small-caps;
+}
+
+#welcome {
+  width: 800px;
+  min-width: 1000px;
+  text-align: justify;
+  padding-left: 50px;
+}
+
+#welcome p {
+
+}
+
+#top-button {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+#randomize-all {
+  position: relative;
+  padding-right: 200px;
+  padding-left: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Alegreya', serif;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  margin-left: 0px auto;
+  margin-right: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#sidebar-img {
+  float: right;
+  display: block;
+  margin: auto;
+  right: 0;
+  width: 200px;
+  height: 800px;
+  background-color: lightgray;
+  outline: 1px solid grey;
+  z-index: 0;
 }
 
 footer {
