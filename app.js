@@ -32,7 +32,7 @@ showrace();
 
 
 
-//chose random class
+// chose random class
 
 var classarray=['1','a','3','5','ff','ffsf','er','g','ty','jh','j','rhfn'];
 document.getElementById('randomclass').addEventListener('click',generaterandomclass);
@@ -45,7 +45,8 @@ function generaterandomclass(){
 
 }
 
-//chose class
+// chose class
+
 
 function showclass(){
 
@@ -55,6 +56,33 @@ function showclass(){
 
 }
 showclass();
+
+
+
+// Generate random class for third button randomize
+
+var thirdRandomClass = ['description', 'description','description', 'description', 'description', 'description', 'description','description','description','description','description','description','description'];
+document.getElementById('randombackground').addEventListener('click', generateThirdRandomClass);
+
+function generateThirdRandomClass(){
+
+var randomindex = Math.floor(Math.random() * 13);
+document.getElementById('third').value=thirdRandomClass[randomindex];
+document.getElementById('generatethirdclass').value=randomindex;
+
+}
+
+function showThirdClass(){
+
+  var randomThird = document.getElementById('generatethirdclass').value;
+  document.getElementById('thirdclass').value=racearray[randomThird];
+
+}
+
+showThirdClass();
+
+
+
 
 
 //pick one button from 9 options;
