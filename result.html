@@ -16,7 +16,49 @@
 
 
 
-<main id='main-content'></main>
+<main id="main-content">
+<div id="character-results"></div>
+
+<form id="character-form">
+    <fieldset>
+      
+      <label>
+        Name:
+        <input name="nameInput" type="text">
+      </label>
+      
+      <br>
+      
+      <label>
+        Age:
+        <input name="ageInput" type="number">
+      </label>
+      
+      <br>
+      
+      <label>
+        Gender:
+       
+          <select class="" id="gender-dd" onchange="showGender();">
+            <option value="0">Male</option>
+            <option value="1">Female</option>           
+          </select>
+        <input type="text" name="genderInput" id="gender-input"> 
+        <button type="button" class="random-buttons" id="random-gender">Randomize</button>
+      </label>
+
+      <br>
+
+      <br>
+
+      <button id="submit" type="submit">Submit</button>
+
+    </fieldset>
+  </form>
+
+
+</main>
+
 
 
 
