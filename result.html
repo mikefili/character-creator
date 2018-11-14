@@ -41,35 +41,43 @@
         <fieldset>
           <label> Name: <input name="nameInput" type="text" /> </label>
 
-          <br />
 
-          <label> Age: <input name="ageInput" type="number" /> </label>
+                <label>
+                    Name:
+                    <input name="nameInput" type="text" id='name'>
+                </label>
 
-          <br />
+
+ 
+                <label>
+                    Age:
+                    <input name="ageInput" type="number" id='age'>
+                </label>
+
 
           <label>
             Gender:
 
+                     <select class="" id='gender-dd'>   
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                    <button type="button" class="random-buttons" id="random-gender">Randomize</button>
+                </label>
 
-                <button type='button' id='submit' >Submit</button>
+            </fieldset>
+        </form>
+         <div id='nameinformation'></div>
+         <div id='ageinformation'></div>
+         <div id='genderinformation'></div>
+        <div id="character-details"></div>
 
-            <select class="" id="gender-dd" onchange="showCharacterImage();">
-              <option value="0">Male</option>
-              <option value="1">Female</option>
-            </select>
-            <button type="button" class="random-buttons" id="random-gender">
-              Randomize
-            </button>
-          </label>
-
-
-          <br /><br />
 
           <button id="submit" type="submit">Submit</button>
         </fieldset>
       </form>
 
-      <div id="character-details"></div>
+
     </main>
 
     <footer></footer>
