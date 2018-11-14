@@ -251,6 +251,12 @@ form {
   width: 8vw;
 }
 
+#f {
+  margin-left: 2vw;
+  width: 20.5vw;
+  height: 1vw;
+}
+
 #alignment {
   border: 1px solid grey;
   border-radius: 0.5vw;
