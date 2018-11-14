@@ -30,25 +30,29 @@
         <div id="character-results">
           <form id="character-form">
           <fieldset>
-          <label> Name: <input name="nameInput" type="text" /> </label>
-          <label> Age: <input name="ageInput" type="number" /> </label>
-          <label>
-          Gender:
-            <button type='button' id='submit' >Submit</button>
-
-          <select class="" id="gender-dd" onchange="showCharacterImage();">
-            <option value="0">Male</option>
-            <option value="1">Female</option>
-          </select>
-          <button type="button" class="random-buttons" id="random-gender">
-              Randomize
-          </button>
-          </label>
-          <button id="submit" type="submit">Submit</button>
+            <div id="name">
+              <label>Name: <input name="nameInput" type="text" /> </label>
+            </div>
+            <div id="age">
+              <label>Age: <input name="ageInput" type="number" /> </label>
+            </div>
+            <div id="gender">
+              <label>Gender: 
+                <!-- <button type='button' class="random-buttons" id='submit' >Submit</button> -->
+                <select class="" id="gender-dd" onchange="showCharacterImage();">
+                  <option value="0">Male</option>
+                  <option value="1">Female</option>
+                </select>
+                <button type="button" class="random-buttons" id="random-gender">Randomize</button>
+              </label>
+            </div>
+              <button id="submit" type="submit">Submit</button>
           </fieldset>
           </form>
 
-          <div id="character-details"></div>
+          <div id="character-details">
+            
+          </div>
         </div>
     </main>
     <div id="sidebar-img-results"></div>
