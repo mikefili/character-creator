@@ -1,4 +1,4 @@
-var genderSelected;
+ var genderSelected;
 
 //Get all stored option arrays
 var storedRaces = JSON.parse(localStorage.getItem('race'));
@@ -41,18 +41,24 @@ function generateRandomGender() {
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
 }
 
+
+
+
+
+
+document.getElementById('submit').addEventListener('click',showCharacterImage);
 function showCharacterImage() {
   //Set gender based on dropdown selection. Need to set anytime this is triggered by a dropdown change.
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
 
   //delete current image if there is one before creating a new one
   var existingImage = document.getElementById('character-image');
-  if (existingImage != null) {
+  if (existingImage !== null) {
     existingImage.parentNode.removeChild(existingImage);
   }
 
   //Set charImagePath to the folder that has the images and uses a filename race_gender.png
-  charImagePath = `./assets/Character Images/${charRace}_${genderSelected}.png`
+  var charImagePath = `./assets/Character Images/${charRace}_${genderSelected}.png`;
 
   //create a new element 'img' and add to character-details div
   var charImage = document.createElement('img');
@@ -62,3 +68,8 @@ function showCharacterImage() {
   var divCharacterDetails = document.getElementById('character-details');
   divCharacterDetails.appendChild(charImage);
 }
+
+
+
+
+
