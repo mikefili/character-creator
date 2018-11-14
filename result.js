@@ -15,15 +15,15 @@ var charBackground = storedBackgrounds[storedBackgrounds.length - 1];
 var charAlignment = storedAlignments[storedAlignments.length - 1];
 
 //Get the character results div that will hold the results from the page before
-var divCharacterResults = document.getElementById('character-results');
+var divCharacterResults = document.getElementById('character-details');
 
 var pRace = document.createElement('p');
 pRace.textContent = 'Race: ' + charRace;
-divCharacterResults.append(pRace);
+divCharacterResults.appendChild(pRace);
 
 var pClass = document.createElement('p');
 pClass.textContent = 'Class: ' + charClass;
-divCharacterResults.append(pClass);
+divCharacterResults.appendChild(pClass);
 
 var pBackground = document.createElement('p');
 pBackground.textContent = 'Background: ' + charBackground;
@@ -31,7 +31,7 @@ divCharacterResults.appendChild(pBackground);
 
 var pAlignment = document.createElement('p');
 pAlignment.textContent = 'Alignment: ' + charAlignment;
-divCharacterResults.append(pAlignment);
+divCharacterResults.appendChild(pAlignment);
 
 //Adding event listener for the button for generating random gender
 document.getElementById('random-gender').addEventListener('click', generateRandomGender);
@@ -76,15 +76,25 @@ function showCharacterImage() {
 
   if (pel.textContent !== null) {
 
-    el.innerHTML = '';
-    pel.textContent = 'Name:' + nameinfo.value;
+
+
+  var el=document.getElementById('nameinformation');
+  var nameinfo=document.getElementById('name');
+
+  var pel=document.createElement('p');
+
+  if(pel.textContent!==null){
+    el.innerHTML='';
+    pel.textContent='Name: ' + nameinfo.value;
     el.appendChild(pel);
 
   }
 
+
   else {
 
-    pel.textContent = 'Name:' + nameinfo.value;
+    pel.textContent = 'Name: ' + nameinfo.value;
+    
     el.appendChild(pel);
   }
 
@@ -94,14 +104,21 @@ function showCharacterImage() {
 
   if (ppel.textContent !== null) {
 
-    eel.innerHTML = '';
-    ppel.textContent = 'Age:' + ageinfo.value;
+  var eel=document.getElementById('ageinformation');
+  var ageinfo=document.getElementById('age');
+
+  var ppel=document.createElement('p');
+
+  if(ppel.textContent!==null){
+
+    eel.innerHTML='';
+    ppel.textContent='Age: ' + ageinfo.value;
     eel.appendChild(ppel);
   }
 
   else {
 
-    ppel.textContent = 'Age:' + ageinfo.value;
+    ppel.textContent='Age: ' + ageinfo.value;
     eel.appendChild(ppel);
     
   }
@@ -111,15 +128,22 @@ function showCharacterImage() {
 
   if (pppel.textContent !== null) {
 
-    eeel.innerHTML = '';
-    pppel.textContent = 'Gender:' + document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
+  var eeel=document.getElementById('genderinformation');
+  // var genderinfo=document.getElementById('gender-dd');
+
+  var pppel=document.createElement('p');
+
+  if(pppel.textContent!==null){
+
+    eeel.innerHTML='';
+    pppel.textContent='Gender: ' + document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
     console.log(pppel);
     eeel.appendChild(pppel);
   }
 
-  else {
+  else{
 
-    pppel.textContent = 'Gender:' + document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
+    pppel.textContent='Gender: ' + document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
     eeel.appendChild(ppel);
   
   }
@@ -151,20 +175,3 @@ function showCharacterImage() {
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
