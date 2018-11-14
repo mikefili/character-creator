@@ -1,3 +1,5 @@
+'use strict;'
+
 var genderSelected;
 
 //Get all stored option arrays
@@ -41,16 +43,11 @@ function generateRandomGender() {
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
 }
 
-
-
-
-
-
-document.getElementById('submit').addEventListener('click',showCharacterImage);
+document.getElementById('submit').addEventListener('click', showCharacterImage);
 
 function showCharacterImage() {
-//   //Set gender based on dropdown selection. Need to set anytime this is triggered by a dropdown change.
-//   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
+  //   //Set gender based on dropdown selection. Need to set anytime this is triggered by a dropdown change.
+  //   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
 
   //   //delete current image if there is one before creating a new one
   //   var existingImage = document.getElementById('character-image');
@@ -73,6 +70,11 @@ function showCharacterImage() {
   // }
 
 
+  var el = document.getElementById('nameinformation');
+  var nameinfo = document.getElementById('name');
+  var pel = document.createElement('p');
+
+  if (pel.textContent !== null) {
 
 
 
@@ -87,17 +89,20 @@ function showCharacterImage() {
     el.appendChild(pel);
 
   }
-  else{
 
-    pel.textContent='Name: ' + nameinfo.value;
+
+  else {
+
+    pel.textContent = 'Name: ' + nameinfo.value;
+    
     el.appendChild(pel);
   }
 
+  var eel = document.getElementById('ageinformation');
+  var ageinfo = document.getElementById('age');
+  var ppel = document.createElement('p');
 
-
-
-
-
+  if (ppel.textContent !== null) {
 
   var eel=document.getElementById('ageinformation');
   var ageinfo=document.getElementById('age');
@@ -109,20 +114,19 @@ function showCharacterImage() {
     eel.innerHTML='';
     ppel.textContent='Age: ' + ageinfo.value;
     eel.appendChild(ppel);
-
   }
 
-
-  else{
+  else {
 
     ppel.textContent='Age: ' + ageinfo.value;
     eel.appendChild(ppel);
+    
   }
 
+  var eeel = document.getElementById('genderinformation');
+  var pppel = document.createElement('p');
 
-
-
-
+  if (pppel.textContent !== null) {
 
   var eeel=document.getElementById('genderinformation');
   // var genderinfo=document.getElementById('gender-dd');
@@ -135,33 +139,24 @@ function showCharacterImage() {
     pppel.textContent='Gender: ' + document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
     console.log(pppel);
     eeel.appendChild(pppel);
-
   }
-
 
   else{
 
     pppel.textContent='Gender: ' + document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
     eeel.appendChild(ppel);
-
+  
   }
 
-
-
-
-
-
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
-
   var existingImage = document.getElementById('character-image');
-  
+
   //Set charImagePath to the folder that has the images and uses a filename race_gender.png
   var charImagePath = `./assets/Character Images/${charRace}_${genderSelected}.png`;
-
- 
   var divCharacterDetails = document.getElementById('character-details');
-   //create a new element 'img' and add to character-details div
-   var charImage = document.createElement('img');
+  //create a new element 'img' and add to character-details div
+
+  var charImage = document.createElement('img');
 
   if (existingImage !== null) {
 
@@ -171,31 +166,12 @@ function showCharacterImage() {
     charImage.setAttribute('id', 'character-image');
     divCharacterDetails.appendChild(charImage);
   }
-  else{
+
+  else {
 
     charImage.setAttribute('src', charImagePath);
     charImage.setAttribute('id', 'character-image');
-
     divCharacterDetails.appendChild(charImage);
 
   }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
