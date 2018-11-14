@@ -99,10 +99,46 @@ for(var i=0;i<buttonel.length;i++){
       n=this.index;
     }
   };
-
-
-
 }
+
+function renderAlignmentDescriptions (){
+  var alignmentDescriptions = [
+    "Can be counted on to do the right thing as expected by society.",
+    "Act in accordance with law, tradition, or personal codes.",
+    "Methodically take what they want, within the limits of a code of tradition, loyalty, or order.",
+    "Do the best they can to help others according to their needs.",
+    "The alignment of those who prefer to steer clear of moral questions and don’t take sides, doing what seems best at the time.",
+    "The alignment of those who do whatever they can get away with, without compassion or qualms.",
+    "Act as their conscience directs, with little regard for what others expect.",
+    "Follow their whims, holding their personal freedom above all else.",
+    "Act with arbitrary violence, spurred by their greed, hatred, or bloodlust."
+  ]
+
+  function alignmentDescription (id, index){
+    var popup = document.getElementById(id);
+    popup.onmouseover = function() {
+      var alignEl = document.getElementById(id);
+      var alignDescriptionEL = document.createElement('div');
+      alignDescriptionEL.id = (id + 'Popup');
+      alignEl.appendChild(alignDescriptionEL);
+
+      alignDescriptionEL.style.display = alignmentDescriptions[index];
+    }
+
+    popup.onmouseout = function() {
+      var alignEl = document.getElementById(id);
+      var alignDescriptionEL = document.createElement('div');
+      alignDescriptionEL.id = (id + 'Popup');
+      alignEl.appendChild(alignDescriptionEL);
+
+      alignDescriptionEL.style.display = 'none';
+    }
+  }
+  var lawfulgood = alignmentDescription ('lawful-good', 1);
+  console.log(lawfulgood);
+}
+
+renderAlignmentDescriptions ();
 
 //randomly pick one button
 document.getElementById('randomalignment').addEventListener('click',generaterandomalignment);
