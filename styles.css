@@ -2,7 +2,10 @@ body {
   font-family: 'Alegreya', serif;
   width: auto;
   min-width: 100vw;
-  background-color: aquamarine;
+  background-image: url('./assets/bkg1.jfif');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 nav {
@@ -19,7 +22,7 @@ header {
   opacity: 0.8;
   font-family: 'Cinzel', serif;
   color: white;
-  outline: 1px solid black;
+  outline: 1px solid white;
 }
 
 header * nav {
@@ -46,7 +49,6 @@ header * nav {
 }
 
 #header-socials img {
-  outline: 1px solid white;
   display: inline-block;
   width: 2vw;
   height: 2vw;
@@ -54,7 +56,6 @@ header * nav {
 }
 
 #header-socials img:last-child {
-  outline: 1px solid white;
   width: 2vw;
   height: 2vw;
   display: inline-block;
@@ -65,6 +66,7 @@ header * nav {
   width: 10vw;
   height: 75vw;
   background-color: lightgray;
+  opacity: 0.8;
   outline: 1px solid grey;
 }
 
@@ -74,13 +76,12 @@ header * nav {
   display: table-column;
   width: 80vw;
   height: 70vw;
-  z-index: 0;
   background-color: rgba(100, 100, 100, .8)
 }
 
 #main-content {
   display: block;
-  width: 60vw;
+  width: 68vw;
   margin-right: auto;
   margin-left: auto;
   
@@ -92,6 +93,7 @@ header * nav {
   font-size: 3vw;
   font-variant: small-caps;
   display: block;
+  color: white;
 }
 
 #welcome {
@@ -102,6 +104,7 @@ header * nav {
   margin-right: auto;
   margin-top: 2vw;
   margin-bottom: 2vw;
+  color: white;
 }
 
 #top-button {
@@ -118,8 +121,8 @@ header * nav {
   padding-bottom: 5px;
   font-family: 'Alegreya', serif;
   font-size: 1.5vw;
-  background-color: lightgray;
-  color: black;
+  background-image: linear-gradient(red, orange);
+  color: white;
   margin-left: 0px auto;
   margin-right: 0px auto;
   margin-top: 1vw;
@@ -128,12 +131,26 @@ header * nav {
 
 .random-buttons {
   position: relative;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
   font-family: 'Alegreya', serif;
   font-size: 1vw;
-  background-color: lightgray;
-  color: black;
+  background-image: linear-gradient(red, orange);
+  color: white;
+  margin-left: 1.5vw;
+  margin-right: 1vw;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.random-buttons:last-of-type {
+  position: relative;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-family: 'Alegreya', serif;
+  font-size: 1vw;
+  background-image: linear-gradient(red, orange);
+  color: white;
   margin-left: 3.5vw;
   margin-right: 1vw;
   margin-top: 2vw;
@@ -149,7 +166,7 @@ form {
   border: 1px solid grey;
   border-radius: 0.5vw;
   background-color: rgba(200, 200, 200, 0.8);
-  width: 20vw;
+  width: 24vw;
   height: 10vw;
   float: left;
   margin-left: 5vw;
@@ -168,12 +185,12 @@ form {
 }
 
 #a {
-  width: 5vw;
+  width: 7vw;
 }
 
 #b {
   margin-left: 2vw;
-  width: 15vw;
+  width: 20vw;
   height: 1vw;
 }
 
@@ -181,7 +198,7 @@ form {
   border: 1px solid grey;
   border-radius: 0.5vw;
   background-color: rgba(200, 200, 200, 0.8);
-  width: 20vw;
+  width: 24vw;
   height: 10vw;
   display: inline-block;
   margin-left: 5vw;
@@ -199,12 +216,12 @@ form {
 }
 
 #c {
-  width: 5vw;
+  width: 7vw;
 }
 
 #d {
   margin-left: 2vw;
-  width: 15vw;
+  width: 20vw;
   height: 1vw;
 }
 
@@ -231,7 +248,7 @@ form {
 }
 
 #e {
-  width: 5vw;
+  width: 8vw;
 }
 
 #alignment {
@@ -260,16 +277,16 @@ form {
 }
 
 #randomalignment {
-  margin-left: 22vw;
+  margin-left: 21vw;
   margin-bottom: 0.5vw;
   position: relative;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
   margin-top: 0.5vw;
   font-family: 'Alegreya', serif;
   font-size: 1vw;
-  background-color: lightgray;
-  color: black;
+  background-image: linear-gradient(red, orange);
+  color: white;
 }
 
 #lawful {
@@ -367,8 +384,8 @@ form {
   padding-bottom: 0.5vw;
   font-family: 'Alegreya', serif;
   font-size: 1.5vw;
-  background-color: lightgray;
-  color: black;
+  background-image: linear-gradient(red, orange);
+  color: white;
   margin-left: 0px auto;
   margin-right: 0px auto;
   margin-top: 1vw;
@@ -381,8 +398,8 @@ form {
   width: 10vw;
   height: 75vw;
   background-color: lightgray;
-  outline: 1px solid grey;
-  z-index: 1;
+  opacity: 0.8;
+  outline: 1px solid white;
 }
 
 footer {
@@ -391,7 +408,8 @@ footer {
   float: left;
   bottom: 0;
   background-color: grey;
-  outline: 1px solid black;
+  opacity: 0.2;
+  outline: 1px solid white;
 }
 
 
