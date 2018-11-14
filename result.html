@@ -25,35 +25,38 @@
       </div>
       <div id="header-text-results"><h1>Customize!</h1></div>
     </header>
-    <div id="sidebar-nav-results"></div>
+   <div id="sidebar-nav-results"></div>
     <main id="main-content-results">
         <div id="character-results">
           <form id="character-form">
           <fieldset>
             <div id="name">
-              <label>Name: <input name="nameInput" type="text" /> </label>
+              <label>Name: <input name="nameInput" type="text" id="name"/> </label>
             </div>
             <div id="age">
-              <label>Age: <input name="ageInput" type="number" /> </label>
+              <label>Age: <input name="ageInput" type="number" id="age" /> </label>
             </div>
             <div id="gender">
               <label>Gender: 
                 <!-- <button type='button' class="random-buttons" id='submit' >Submit</button> -->
-                <select class="" id="gender-dd" onchange="showCharacterImage();">
+                <select class="" id="gender-dd" >
                   <option value="0">Male</option>
                   <option value="1">Female</option>
                 </select>
                 <button type="button" class="random-buttons" id="random-gender">Randomize</button>
               </label>
             </div>
-              <button id="submit" type="submit">Submit</button>
+              <button id="submit" type="button">Submit</button>
           </fieldset>
           </form>
-
+          <div id='nameinformation'></div>
+         <div id='ageinformation'></div>
+         <div id='genderinformation'></div>
           <div id="character-details">
             
           </div>
         </div>
+
     </main>
     <div id="sidebar-img-results"></div>
     <script src="app.js"></script>
