@@ -20,12 +20,13 @@ var racearray = [
 
 //chose random race 
 
-document.getElementById('randomrace').addEventListener('click', generaterandomrace);
+// document.getElementById('randomrace').addEventListener('click', generaterandomrace);
 
 function generaterandomrace() {
+  document.getElementById('randomrace').addEventListener('click', generaterandomrace);
+
+
   var randomindex = Math.floor(Math.random() * 9);
-
-
   document.getElementById('b').textContent = racearray[randomindex];
   document.getElementById('a').value = randomindex;
   raceoptions.push(document.getElementById('a').options[document.getElementById('a').selectedIndex].text);
