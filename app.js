@@ -2,6 +2,8 @@
 // var result=[];
 var raceoptions=[];
 var classoptions=[];
+var backgroundoptions=[];
+var alignmentoptions=[];
 
 var racearray=[
   'Description: Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs—these common threads unite all dwarves.',
@@ -17,8 +19,8 @@ var racearray=[
 
 document.getElementById('randomrace').addEventListener('click',generaterandomrace);
 
-function generaterandomrace(){
-
+function generaterandomrace(e){
+ e.preventDefault();
   var randomindex=Math.floor(Math.random()*9);
 
 
@@ -26,7 +28,7 @@ function generaterandomrace(){
 
   document.getElementById('a').value=randomindex;
 
-  raceoptions.push(racearray[randomindex]);
+  raceoptions.push(document.getElementById('a').options[document.getElementById('a').selectedIndex].text);
 }
 
 //chose race
@@ -36,7 +38,7 @@ function showrace(){
   var selectedrace=document.getElementById('a').value;
   document.getElementById('b').value=racearray[selectedrace];
   // return racepick=racearray[selectedrace];
-  raceoptions.push(racearray[selectedrace]);
+  raceoptions.push(document.getElementById('a').options[document.getElementById('a').selectedIndex].text);
 }
 
 showrace();
@@ -69,7 +71,7 @@ function generaterandomclass(){
   document.getElementById('d').value=classarray[randomindex];
   document.getElementById('c').value=randomindex;
 
-  classoptions.push(classarray[randomindex]);
+  classoptions.push(document.getElementById('c').options[document.getElementById('c').selectedIndex].text);
 }
 
 //chose class
@@ -79,7 +81,7 @@ function showclass(){
   var selectedclass=document.getElementById('c').value;
   document.getElementById('d').value=classarray[selectedclass];
 
-  classoptions.push(classarray[selectedclass]);
+  classoptions.push(document.getElementById('c').options[document.getElementById('c').selectedIndex].text);
 
 }
 showclass();
@@ -91,21 +93,9 @@ showclass();
 
 
 
-//randomly pick one button
-document.getElementById('randomalignment').addEventListener('click',generaterandomalignment);
 
-function generaterandomalignment(){
 
-  var buttonel=document.querySelectorAll('.alel');
 
-  var randomindexnumber=Math.floor(Math.random()*9);
-  for(var i=0;i<buttonel.length;i++){
-
-    buttonel[i].setAttribute('isAct','0');
-  }
-
-  buttonel[randomindexnumber].setAttribute('isAct','1');
-}
 
 
 
@@ -126,13 +116,52 @@ for(var i=0;i<buttonel.length;i++){
     else{
 
       buttonel[n].setAttribute('isAct','0');
+      
       this.setAttribute('isAct','1');
       n=this.index;
     }
+    alignmentoptions.push(buttonel[n].innerHTML);
   };
 
 
 
+}
+
+
+
+//randomly pick one button
+document.getElementById('randomalignment').addEventListener('click',generaterandomalignment);
+
+function generaterandomalignment(e){
+  e.preventDefault();
+
+  var buttonel=document.querySelectorAll('.alel');
+
+  var randomindexnumber=Math.floor(Math.random()*9);
+  for(var i=0;i<buttonel.length;i++){
+
+    buttonel[i].setAttribute('isAct','0');
+  }
+
+  n=randomindexnumber;
+  buttonel[randomindexnumber].setAttribute('isAct','1');
+  alignmentoptions.push(buttonel[n].innerHTML);
+}
+
+
+
+
+
+
+//try to use local storage to save data user pick
+
+
+function savedata(){
+
+  localStorage.setItem('race',JSON.stringify(raceoptions));
+  localStorage.setItem('class',JSON.stringify(classoptions));
+  localStorage.setItem('background',JSON.stringify(backgroundoptions));
+  localStorage.setItem('alignment',JSON.stringify(alignmentoptions));
 }
 
 
@@ -148,8 +177,23 @@ function handlesubmit(e){
   e.preventDefault();
 
 
-  alert('You chose Race: ' + raceoptions[raceoptions.length-1] + 'You chose class: '+ classoptions[classoptions.length-1]);
+  // alert('You chose Race: ' + raceoptions[raceoptions.length-1] + ' \n You chose class: '+ classoptions[classoptions.length-1]);
 
+  var like=window.confirm('Your Race is : ' + raceoptions[raceoptions.length-1] +
+  ' \n Your Class is : '+ classoptions[classoptions.length-1]+
+  '\n Your Background is :' + backgroundoptions[backgroundoptions.length-1]+
+  '\n Your Alignment is :'+ alignmentoptions[alignmentoptions.length-1]+
+  '\nDo you like what we chose for you?');
+  if(like===true)
+  { 
+    savedata();
+    window.location.href='result.html';}
+  else{
+
+    // document.write('ok no worries!');
+    location.reload();
+    localStorage.clear();
+  }
 
 }
 
