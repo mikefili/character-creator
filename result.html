@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="result.css" />
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Character Creator: Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="results-styles.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Cinzel");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Alegreya");
+    </style>
+  </head>
 
-<body>
-
-    <header></header>
+  <body>
+    <header>
+      <div id="header-socials">
+        <a href="https://www.facebook.com"><img src="./assets/fb-logo.png"/></a>
+        <a href="https://www.twitter.com"
+          ><img src="./assets/twitter-logo.png"
+        /></a>
+        <a href="https://www.instagram.com"
+          ><img src="./assets/ig-logo.png"
+        /></a>
+        <a href="https://www.gmail.com"><img src="./assets/mail-logo.png"/></a>
+      </div>
+      <div id="header-text"><h1>Welcome!</h1></div>
+    </header>
 
     <main id="main-content">
-        <div id="character-results"></div>
+      <div id="character-results"></div>
 
-        <form id="character-form">
-            <fieldset>
+      <form id="character-form">
+        <fieldset>
+          <label> Name: <input name="nameInput" type="text" /> </label>
+
 
                 <label>
                     Name:
                     <input name="nameInput" type="text" id='name'>
                 </label>
 
-                <br>
 
+ 
                 <label>
                     Age:
                     <input name="ageInput" type="number" id='age'>
                 </label>
 
-                <br>
 
-                <label>
-                    Gender:
+          <label>
+            Gender:
 
                      <select class="" id='gender-dd'>   
                         <option value="0">Male</option>
@@ -43,10 +65,6 @@
                     <button type="button" class="random-buttons" id="random-gender">Randomize</button>
                 </label>
 
-                <br><br>
-
-                <button type='button' id='submit' >Submit</button>
-
             </fieldset>
         </form>
          <div id='nameinformation'></div>
@@ -54,11 +72,17 @@
          <div id='genderinformation'></div>
         <div id="character-details"></div>
 
+
+          <button id="submit" type="submit">Submit</button>
+        </fieldset>
+      </form>
+
+
     </main>
 
     <footer></footer>
 
     <script src="app.js"></script>
     <script src="result.js"></script>
-</body>
+  </body>
 </html>
