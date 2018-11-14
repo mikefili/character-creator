@@ -1,77 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="result.css" />
-    
 </head>
+
 <body>
-    
-<header></header>
 
+    <header></header>
 
+    <main id="main-content">
+        <div id="character-results"></div>
 
+        <form id="character-form">
+            <fieldset>
 
+                <label>
+                    Name:
+                    <input name="nameInput" type="text">
+                </label>
 
-<main id="main-content">
-<div id="character-results"></div>
+                <br>
 
-<form id="character-form">
-    <fieldset>
-      
-      <label>
-        Name:
-        <input name="nameInput" type="text">
-      </label>
-      
-      <br>
-      
-      <label>
-        Age:
-        <input name="ageInput" type="number">
-      </label>
-      
-      <br>
-      
-      <label>
-        Gender:
-       
-          <select class="" id="gender-dd" onchange="showGender();">
-            <option value="0">Male</option>
-            <option value="1">Female</option>           
-          </select>
-        <input type="text" name="genderInput" id="gender-input"> 
-        <button type="button" class="random-buttons" id="random-gender">Randomize</button>
-      </label>
+                <label>
+                    Age:
+                    <input name="ageInput" type="number">
+                </label>
 
-      <br>
+                <br>
 
-      <br>
+                <label>
+                    Gender:
 
-      <button id="submit" type="submit">Submit</button>
+                    <select class="" id="gender-dd" onchange="showCharacterImage();">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                    <button type="button" class="random-buttons" id="random-gender">Randomize</button>
+                </label>
 
-    </fieldset>
-  </form>
+                <br><br>
 
+                <button id="submit" type="submit">Submit</button>
 
-</main>
+            </fieldset>
+        </form>
 
+        <div id="character-details"></div>
 
+    </main>
 
-
-
-
-
-<footer></footer>
-
-
-
-
-
-
+    <footer></footer>
 
     <script src="app.js"></script>
     <script src="result.js"></script>
