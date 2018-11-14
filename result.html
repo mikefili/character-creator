@@ -1,88 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Character Creator: Results</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="results-styles.css"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Cinzel");
-    </style>
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Alegreya");
-    </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Character Creator: Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="reset.css" />
+  <link rel="stylesheet" type="text/css" href="results-styles.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Cinzel");
+  </style>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Alegreya");
+  </style>
   </head>
 
   <body>
     <header>
       <div id="header-socials">
         <a href="https://www.facebook.com"><img src="./assets/fb-logo.png"/></a>
-        <a href="https://www.twitter.com"
-          ><img src="./assets/twitter-logo.png"
-        /></a>
-        <a href="https://www.instagram.com"
-          ><img src="./assets/ig-logo.png"
-        /></a>
+        <a href="https://www.twitter.com"><img src="./assets/twitter-logo.png"/></a>
+        <a href="https://www.instagram.com"><img src="./assets/ig-logo.png"/></a>
         <a href="https://www.gmail.com"><img src="./assets/mail-logo.png"/></a>
       </div>
-      <div id="header-text"><h1>Welcome!</h1></div>
+      <div id="header-text-results"><h1>Customize!</h1></div>
     </header>
-
-    <main id="main-content">
-      <div id="character-results"></div>
-
-      <form id="character-form">
-        <fieldset>
-          <label> Name: <input name="nameInput" type="text" /> </label>
-
-
-                <label>
-                    Name:
-                    <input name="nameInput" type="text" id='name'>
-                </label>
-
-
- 
-                <label>
-                    Age:
-                    <input name="ageInput" type="number" id='age'>
-                </label>
-
-
-          <label>
-            Gender:
-
-                     <select class="" id='gender-dd'>   
-                        <option value="0">Male</option>
-                        <option value="1">Female</option>
-                    </select>
-                    <button type="button" class="random-buttons" id="random-gender">Randomize</button>
-                </label>
-
-            </fieldset>
-        </form>
-         <div id='nameinformation'></div>
+   <div id="sidebar-nav-results"></div>
+    <main id="main-content-results">
+        <div id="character-results">
+          <form id="character-form">
+          <fieldset>
+            <div id="name">
+              <label>Name: <input name="nameInput" type="text" id="name"/> </label>
+            </div>
+            <div id="age">
+              <label>Age: <input name="ageInput" type="number" id="age" /> </label>
+            </div>
+            <div id="gender">
+              <label>Gender: 
+                <!-- <button type='button' class="random-buttons" id='submit' >Submit</button> -->
+                <select class="" id="gender-dd" >
+                  <option value="0">Male</option>
+                  <option value="1">Female</option>
+                </select>
+                <button type="button" class="random-buttons" id="random-gender">Randomize</button>
+              </label>
+            </div>
+              <button id="submit" type="button">Submit</button>
+          </fieldset>
+          </form>
+          <div id='nameinformation'></div>
          <div id='ageinformation'></div>
          <div id='genderinformation'></div>
-        <div id="character-details"></div>
-
-
-          <button id="submit" type="submit">Submit</button>
-        </fieldset>
-      </form>
-
+          <div id="character-details">
+            
+          </div>
+        </div>
 
     </main>
-
-    <footer></footer>
-
+    <div id="sidebar-img-results"></div>
     <script src="app.js"></script>
     <script src="result.js"></script>
   </body>
+  <footer>
+    <a href="#" id="footer-link-results">About the Developers</a>
+    <p class="footer-text-results">MIT License</p>
+    <p class="footer-text-results">2018 &#169; Code Fellows 201d41</p>
+    </footer>
 </html>
