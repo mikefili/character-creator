@@ -123,15 +123,4 @@ function generaterandomalignment() {
 }
 
 
-
-
-function displayResults() {
  
-    var allOptions = document.getElementById("generatethirdclass").options.length;
-    var allOptions = document.getElementById("c").options.length;
-    var allOptions = document.getElementById("a").options.length;
-    var allOptions = document.getElementById("generatethirdclass").options.length;
-    document.getElementById("demo").innerHTML = "Found " + x + " options in the list.";
-
-
-}
