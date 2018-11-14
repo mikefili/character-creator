@@ -224,14 +224,14 @@ function savedata() {
 document.getElementById('submitbutton').addEventListener('click', handlesubmit);
 
 function handlesubmit(e) {
- e.preventDefault();
+  e.preventDefault();
 
   // alert('You chose Race: ' + raceoptions[raceoptions.length-1] + ' \n You chose class: '+ classoptions[classoptions.length-1]);
 
-  var like = window.confirm('Your Race is : ' + raceoptions[raceoptions.length - 1] +
-    ' \n Your Class is : ' + classoptions[classoptions.length - 1] +
-    '\n Your Background is :' + backgroundoptions[backgroundoptions.length - 1] +
-    '\n Your Alignment is :' + alignmentoptions[alignmentoptions.length - 1] +
+  var like = window.confirm('Your Race is: ' + raceoptions[raceoptions.length - 1] +
+    ' \n Your Class is: ' + classoptions[classoptions.length - 1] +
+    '\n Your Background is: ' + backgroundoptions[backgroundoptions.length - 1] +
+    '\n Your Alignment is: '  + alignmentoptions[alignmentoptions.length - 1] +
     '\nDo you like what we chose for you?');
   if (like === true) {
     savedata();

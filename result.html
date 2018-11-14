@@ -21,14 +21,14 @@
 
                 <label>
                     Name:
-                    <input name="nameInput" type="text">
+                    <input name="nameInput" type="text" id='name'>
                 </label>
 
                 <br>
 
                 <label>
                     Age:
-                    <input name="ageInput" type="number">
+                    <input name="ageInput" type="number" id='age'>
                 </label>
 
                 <br>
@@ -36,7 +36,7 @@
                 <label>
                     Gender:
 
-                    <select class="" id="gender-dd" onchange="showCharacterImage();">
+                     <select class="" id='gender-dd'>   
                         <option value="0">Male</option>
                         <option value="1">Female</option>
                     </select>
@@ -49,7 +49,9 @@
 
             </fieldset>
         </form>
-
+         <div id='nameinformation'></div>
+         <div id='ageinformation'></div>
+         <div id='genderinformation'></div>
         <div id="character-details"></div>
 
     </main>
