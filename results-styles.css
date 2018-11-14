@@ -122,7 +122,7 @@ input {
   margin-top: 2vw;
 }
 
-#age input {
+#age-div input {
   width: 5vw;
   height: 1.5vw;
   margin-top: 2vw;
@@ -136,39 +136,45 @@ select {
   height: 2vw;
 }
 
-#name {
+#name-div {
   text-align: center;
   width: 20vw;
   height: 10vw;
   float: left;
   margin-right: 5vw;
-  margin-bottom: 5vw;
+  margin-bottom: 3vw;
   border: 1px solid white;
   border-radius: 0.5vw;
   background-color: rgba(200, 200, 200, 0.8);
 }
 
-#age {
+#age-div {
   text-align: center;
   width: 19vw;
   height: 10vw;
   display: inline-block;
   margin-right: 5vw;
-  margin-bottom: 5vw;
+  margin-bottom: 3vw;
   border: 1px solid white;
   border-radius: 0.5vw;
   background-color: rgba(200, 200, 200, 0.8);
 }
 
-#gender {
+#gender-div {
   text-align: center;
   width: 20vw;
   height: 10vw;
   float: right;
-  margin-bottom: 5vw;
+  margin-bottom: 3vw;
   border: 1px solid white;
   border-radius: 0.5vw;
   background-color: rgba(200, 200, 200, 0.8);
+}
+
+#character-image {
+  width: 30vw;
+  height: 40vw;
+  border: 2vw solid rgba(200, 200, 200, 0.8);
 }
 
 .random-buttons {
@@ -185,9 +191,51 @@ select {
   margin-bottom: 1vw;
 }
 
+#submit {
+  position: relative;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Alegreya', serif;
+  font-size: 1.5vw;
+  background-image: linear-gradient(red, orange);
+  color: white;
+  margin-left: 22.3vw;
+  margin-right: auto;
+  margin-top: -1vw;
+  margin-bottom: 2vw;
+}
+
 #character-details {
-  border: 1px solid lime;
-  height: 20vw;
+  background-color: rgba(128, 128, 128, .8);
+  outline: 1px solid white;
+  height: 50vw;
+  display: block;
+  width: 70vw;
+}
+
+#details-div {
+  width: 25vw;
+  height: 50vw;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#character-details p {
+  text-align: justify;
+  width: 22vw;
+  margin-left: 2vw;
+  bottom: 20;
+  line-height: 7vw;
+  color: white;
+}
+
+#character-details img {
+  float: right;
+  position: relative;
+  margin-right: 5vw;
+  margin-top: -45vw;
 }
 
 #sidebar-img-results {
