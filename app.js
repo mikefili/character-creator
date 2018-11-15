@@ -20,9 +20,7 @@ function generaterandomrace(){
 
   var randomindex=Math.floor(Math.random()*9);
 
-
   document.getElementById('b').value=racearray[randomindex];
-
   document.getElementById('a').value=randomindex;
 }
 
@@ -32,8 +30,6 @@ function showrace(){
 
   var selectedrace=document.getElementById('a').value;
   document.getElementById('b').value=racearray[selectedrace];
-
-
 }
 showrace();
 
@@ -65,20 +61,15 @@ function generaterandomclass(){
   var randomindex=Math.floor(Math.random()*12);
   document.getElementById('d').value=classarray[randomindex];
   document.getElementById('c').value=randomindex;
-
 }
 
 //chose class
 
 function showclass(){
-
   var selectedrace=document.getElementById('c').value;
   document.getElementById('d').value=racearray[selectedrace];
-
-
 }
 showclass();
-
 
 //pick one button from 9 options;
 
@@ -101,44 +92,56 @@ for(var i=0;i<buttonel.length;i++){
   };
 }
 
-function renderAlignmentDescriptions (){
-  var alignmentDescriptions = [
-    "Can be counted on to do the right thing as expected by society.",
-    "Act in accordance with law, tradition, or personal codes.",
-    "Methodically take what they want, within the limits of a code of tradition, loyalty, or order.",
-    "Do the best they can to help others according to their needs.",
-    "The alignment of those who prefer to steer clear of moral questions and don’t take sides, doing what seems best at the time.",
-    "The alignment of those who do whatever they can get away with, without compassion or qualms.",
-    "Act as their conscience directs, with little regard for what others expect.",
-    "Follow their whims, holding their personal freedom above all else.",
-    "Act with arbitrary violence, spurred by their greed, hatred, or bloodlust."
-  ]
+var alignmentDescriptions = [
+  "Can be counted on to do the right thing as expected by society.",
+  "Act in accordance with law, tradition, or personal codes.",
+  "Methodically take what they want, within the limits of a code of tradition, loyalty, or order.",
+  "Do the best they can to help others according to their needs.",
+  "The alignment of those who prefer to steer clear of moral questions and don’t take sides, doing what seems best at the time.",
+  "The alignment of those who do whatever they can get away with, without compassion or qualms.",
+  "Act as their conscience directs, with little regard for what others expect.",
+  "Follow their whims, holding their personal freedom above all else.",
+  "Act with arbitrary violence, spurred by their greed, hatred, or bloodlust."
+]
 
-  function alignmentDescription (id, index){
-    var popup = document.getElementById(id);
-    popup.onmouseover = function() {
-      var alignEl = document.getElementById(id);
-      var alignDescriptionEL = document.createElement('div');
-      alignDescriptionEL.id = (id + 'Popup');
-      alignEl.appendChild(alignDescriptionEL);
-
-      alignDescriptionEL.style.display = alignmentDescriptions[index];
-    }
-
-    popup.onmouseout = function() {
-      var alignEl = document.getElementById(id);
-      var alignDescriptionEL = document.createElement('div');
-      alignDescriptionEL.id = (id + 'Popup');
-      alignEl.appendChild(alignDescriptionEL);
-
-      alignDescriptionEL.style.display = 'none';
-    }
-  }
-  var lawfulgood = alignmentDescription ('lawful-good', 1);
-  console.log(lawfulgood);
+function showMouseOver (id, index) {
+  var alignEl = document.getElementById(id);
+  var alignDescriptionEL = document.createElement('div');
+  alignEl.appendChild(alignDescriptionEL);
+  alignDescriptionEL.style.display = alignmentDescriptions[index];
 }
 
-renderAlignmentDescriptions ();
+// function showMouseOut(id) {
+//   var alignEl = document.getElementById(id);
+//   var alignDescriptionEL = document.createElement('div');
+//   alignEl.appendChild(alignDescriptionEL);
+//   alignDescriptionEL.style.display = 'none';
+// }
+
+function alignmentDescription (id, index){
+  var popUp = document.getElementById(id);
+
+  // alignDescriptionEL.id = (id + 'Popup');
+
+  popUp.onmouseover = showMouseOver;
+  // popUp.onmouseout = showMouseOut;
+  
+  showMouseOver(id, index);
+  // showMouseOut(id);
+}
+
+alignmentDescription ('lawful-good', 1);
+// var lawfulNeutral = alignmentDescription ('lawful-neutral', 2);
+// var lawfulEvil = alignmentDescription ('lawful-evil', 3);
+// var neutralGood = alignmentDescription ('neutral-good', 4);
+// var trueNeutral = alignmentDescription ('true-neutral', 5);
+// var neutralEvil = alignmentDescription ('neutral-evil', 6);
+// var lawfulevil = alignmentDescription ('chaotic-good', 7);
+// var lawfulevil = alignmentDescription ('chaotic-neutral', 8);
+// var lawfulevil = alignmentDescription ('chaotic-evil', 9);
+
+
+// renderAlignmentDescriptions ();
 
 //randomly pick one button
 document.getElementById('randomalignment').addEventListener('click',generaterandomalignment);
