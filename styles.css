@@ -264,6 +264,7 @@ form {
   margin-left: 2vw;
   width: 20vw;
   height: 5vw;
+  overflow-y: scroll;
   font-size: 1vw;
   text-align: center;
 }
