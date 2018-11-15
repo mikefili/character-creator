@@ -68,16 +68,6 @@ function showCharacterImage() {
   //
 
   // }
-
-
-  var el = document.getElementById('nameinformation');
-  var nameinfo = document.getElementById('name');
-  var pel = document.createElement('p');
-
-  if (pel.textContent !== null) {
-
-
-
   var el=document.getElementById('nameinformation');
   var nameinfo=document.getElementById('name');
 
@@ -102,13 +92,6 @@ function showCharacterImage() {
   var ageinfo = document.getElementById('age');
   var ppel = document.createElement('p');
 
-  if (ppel.textContent !== null) {
-
-  var eel=document.getElementById('ageinformation');
-  var ageinfo=document.getElementById('age');
-
-  var ppel=document.createElement('p');
-
   if(ppel.textContent!==null){
 
     eel.innerHTML='';
@@ -120,18 +103,16 @@ function showCharacterImage() {
 
     ppel.textContent='Age: ' + ageinfo.value;
     eel.appendChild(ppel);
-    
   }
 
   var eeel = document.getElementById('genderinformation');
   var pppel = document.createElement('p');
 
-  if (pppel.textContent !== null) {
 
-  var eeel=document.getElementById('genderinformation');
+
   // var genderinfo=document.getElementById('gender-dd');
 
-  var pppel=document.createElement('p');
+
 
   if(pppel.textContent!==null){
 
@@ -145,7 +126,6 @@ function showCharacterImage() {
 
     pppel.textContent='Gender: ' + document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
     eeel.appendChild(ppel);
-  
   }
 
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
@@ -174,4 +154,5 @@ function showCharacterImage() {
     divCharacterDetails.appendChild(charImage);
 
   }
+
 }
