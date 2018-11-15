@@ -1,33 +1,64 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="aboutus.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Character Creator: About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="aboutus-styles.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Cinzel");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Alegreya");
+    </style>
     <script src="main.js"></script>
-</head>
-<body>
+  </head>
 
-
-
-<header><h1>A little Information About Our Team</h1></header>
-<main>
-
-   <div id='one'><img src="http://placehold.it/200x70"> <p>Mike </p></div>
-
-   <div id='two'><img src="http://placehold.it/200x70"> <p> Meggan </p></div>
-
-   <div id='three'><img src="http://placehold.it/200x70"> <p>Xia</p></div>
-
-   <div id='four'><img src="http://placehold.it/200x70"> <p>Regan </p></div>
-
-
-
-</main>
-<footer></footer>
-
-    
-</body>
+  <body>
+    <header>
+      <div id="header-socials">
+        <a href="./index.html"><img src="./assets/home-logo.png"/></a>
+        <a href="https://www.twitter.com"><img src="./assets/twitter-logo.png"/></a>
+        <a href="https://www.instagram.com"><img src="./assets/ig-logo.png"/></a>
+        <a href="https://www.gmail.com"><img src="./assets/mail-logo.png"/></a>
+      </div>
+      <div id="header-text-aboutus"><h1 id="header-text-aboutus">About Our Team</h1></div>
+    </header>
+    <main>
+      <div id="devs">
+        <img src="https://via.placeholder.com/1000x600" id="team-pic">
+        <div id="sidebar-nav-aboutus"></div>
+        <div class="bios" id="one">
+          <h1>Mike</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt hic animi natus ea laboriosam asperiores minus laborum totam saepe consequuntur. Molestias eos consectetur tenetur accusamus eveniet nulla blanditiis doloremque numquam!</p>
+        </div>
+        <div class="bios" id="two">
+          <h1>Meggan</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt hic animi natus ea laboriosam asperiores minus laborum totam saepe consequuntur. Molestias eos consectetur tenetur accusamus eveniet nulla blanditiis doloremque numquam!</p>
+        </div>
+        <div class="bios" id="three">
+          <h1>Xia</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt hic animi natus ea laboriosam asperiores minus laborum totam saepe consequuntur. Molestias eos consectetur tenetur accusamus eveniet nulla blanditiis doloremque numquam!</p>
+        </div>
+        <div class="bios" id="four">
+          <h1>Regan</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt hic animi natus ea laboriosam asperiores minus laborum totam saepe consequuntur. Molestias eos consectetur tenetur accusamus eveniet nulla blanditiis doloremque numquam!</p>
+        </div>
+      </div>
+    </main>
+    <div id="sidebar-img-aboutus"></div>
+    <script src="app.js"></script>
+  </body>
+  <footer>
+    <p class="footer-text-aboutus">This Web site is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC. This Web site may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under Wizards' Fan Site Policy. For example, DUNGEONS & DRAGONS&#174;, D&D&#174;, PLAYER'S HANDBOOK 2&#174;, and DUNGEON MASTER'S GUIDE&#174; are trademark[s] of Wizards of the Coast and D&D&#174; core rules, game mechanics, characters and their distinctive likenesses are the property of the Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards' trademarks or other intellectual property, please visit their website at www.wizards.com.</p>
+    <p class="footer-text-aboutus">Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. &#169; 2009 Wizards. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>
