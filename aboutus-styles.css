@@ -68,7 +68,7 @@ header * nav {
 #sidebar-nav-aboutus {
   float: left;
   width: 10vw;
-  height: 75vw;
+  height: 85vw;
   background-color: rgba(211, 211, 211, 0.8);
   outline: 1px solid white;
 }
@@ -140,7 +140,7 @@ h1 {
   float: right;
   right: 0;
   width: 10vw;
-  height: 75vw;
+  height: 85vw;
   background-color: lightgray;
   opacity: 0.8;
   outline: 1px solid white;
