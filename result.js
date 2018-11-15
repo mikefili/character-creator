@@ -158,6 +158,26 @@ function showCharacterImage() {
 
     divCharacterDetails.appendChild(charImage);
 
+    if (charAlignment === 'Lawful Good') {
+      document.getElementById('character-image').style.border = '2vw solid lightgreen';
+    } else if (charAlignment === 'Lawful Neutral') {
+      document.getElementById('character-image').style.border = '2vw solid rgb(83, 216, 83)';
+    } else if (charAlignment === 'Lawful Evil') {
+      document.getElementById('character-image').style.border = '2vw solid rgb(19, 216, 19)';
+    } else if (charAlignment === 'Neutral Good') {
+      document.getElementById('character-image').style.border = '2vw solid lightyellow';
+    } else if (charAlignment === 'True Neutral') {
+      document.getElementById('character-image').style.border = '2vw solid rgb(255, 255, 136)';
+    } else if (charAlignment === 'Neutral Evil') {
+      document.getElementById('character-image').style.border = '2vw solid rgb(255, 255, 89)';
+    } else if (charAlignment === 'Chaotic Good') {
+      document.getElementById('character-image').style.border = '2vw solid lightcoral';
+    } else if (charAlignment === 'Chaotic Neutral') {
+      document.getElementById('character-image').style.border = '2vw solid rgb(240, 99, 99)';
+    } else {
+      document.getElementById('character-image').style.border = '2vw solid rgb(240, 52, 52)';
+    }
+
   }
 
 }

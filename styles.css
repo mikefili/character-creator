@@ -6,6 +6,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 nav {
@@ -264,6 +265,7 @@ form {
   margin-left: 2vw;
   width: 20vw;
   height: 5vw;
+  overflow-y: scroll;
   font-size: 1vw;
   text-align: center;
 }
@@ -421,32 +423,46 @@ form {
 
 footer {
   width: 100%;
-  height: 12vw;
+  height: 100%;
   float: left;
   bottom: 0;
   background-color: rgba(128, 128, 128, .8);
   outline: 1px solid white;
   text-align: center;
-  line-height: 8vw;
+  line-height: 5vw;
 }
 
 #footer-link {
-  margin-top: 3vw;
   font-family: 'Cinzel', serif;
   font-size: 2vw;
   color: white;
   width: 50vw;
 }
 
+.footer-text:first-of-type {
+  font-family: 'Alegreya', serif;
+  font-size: 1vw;
+  text-align: center;
+  color: white;
+  width: 80vw;
+  height: 1.5vw;
+  margin-top: -1vw;
+  margin-bottom: 3vw;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1vw;
+}
+
 .footer-text {
   font-family: 'Alegreya', serif;
-  font-size: 1.5vw;
+  font-size: 1vw;
+  text-align: center;
   color: white;
-  /* margin: 0;
-  padding: 0;
-  border: 0; */
+  width: 80vw;
   height: 1.5vw;
-  margin-top: -3vw;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1vw;
 }
 
 [isAct='1'] {
