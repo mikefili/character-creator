@@ -101,7 +101,6 @@ header * nav {
   height: 100%;
   padding-top: 3vw;
   margin: auto;
-  /* outline: 5px dashed white; */
 }
 
 fieldset {
@@ -135,6 +134,17 @@ select {
   width: 7vw;
   height: 2vw;
 }
+
+label {
+  font-size: 1.5vw;
+  color: white;
+  padding-top: 5vw;
+}
+
+/* label:last-of-type {
+  font-size: 1.5vw;
+  color: white;
+} */
 
 #name-div {
   text-align: center;
@@ -213,6 +223,7 @@ select {
   height: 50vw;
   display: block;
   width: 70vw;
+  font-size: 1.7vw;
 }
 
 #details-div {
@@ -235,7 +246,7 @@ select {
   float: right;
   position: relative;
   margin-right: 5vw;
-  margin-top: -45vw;
+  margin-top: -46vw;
 }
 
 #sidebar-img-results {
