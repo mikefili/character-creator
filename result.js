@@ -128,9 +128,11 @@ function showCharacterImage() {
     eeel.appendChild(ppel);
   }
 
+
+
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
   var existingImage = document.getElementById('character-image');
-
+ 
   //Set charImagePath to the folder that has the images and uses a filename race_gender.png
   var charImagePath = `./assets/Character Images/${charRace}_${genderSelected}.png`;
   var divCharacterDetails = document.getElementById('character-details');
@@ -141,16 +143,19 @@ function showCharacterImage() {
   if (existingImage !== null) {
 
     existingImage.parentNode.removeChild(existingImage);
-
+   
+    
     charImage.setAttribute('src', charImagePath);
     charImage.setAttribute('id', 'character-image');
+  
     divCharacterDetails.appendChild(charImage);
   }
 
   else {
-
+    
     charImage.setAttribute('src', charImagePath);
     charImage.setAttribute('id', 'character-image');
+
     divCharacterDetails.appendChild(charImage);
 
   }

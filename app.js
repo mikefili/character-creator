@@ -22,9 +22,9 @@ var racearray = [
 
 // document.getElementById('randomrace').addEventListener('click', generaterandomrace);
 
-function generaterandomrace() {
-  document.getElementById('randomrace').addEventListener('click', generaterandomrace);
 
+  document.getElementById('randomrace').addEventListener('click', generaterandomrace);
+  function generaterandomrace() {
 
   var randomindex = Math.floor(Math.random() * 9);
   document.getElementById('b').textContent = racearray[randomindex];
@@ -188,7 +188,7 @@ function generaterandomalignment() {
 
 
   var buttonel = document.querySelectorAll('.alel');
-
+  
   var randomindexnumber = Math.floor(Math.random() * 9);
   for (var i = 0; i < buttonel.length; i++) {
 
@@ -222,14 +222,16 @@ function savedata() {
 
 //submit button
 
+
 document.getElementById('submitbutton').addEventListener('click', handlesubmit);
 
 function handlesubmit(e) {
   e.preventDefault();
 
   // alert('You chose Race: ' + raceoptions[raceoptions.length-1] + ' \n You chose class: '+ classoptions[classoptions.length-1]);
+ 
 
-  var like = window.confirm('Your Race is: ' + raceoptions[raceoptions.length - 1] +
+  var like = window.confirm('Your Race is: <span color=red>'+ raceoptions[raceoptions.length - 1] +
     ' \n Your Class is: ' + classoptions[classoptions.length - 1] +
     '\n Your Background is: ' + backgroundoptions[backgroundoptions.length - 1] +
     '\n Your Alignment is: '  + alignmentoptions[alignmentoptions.length - 1] +
