@@ -24,11 +24,7 @@ var racearray = [
 
 
   document.getElementById('randomrace').addEventListener('click', generaterandomrace);
-<<<<<<< HEAD
   function generaterandomrace() {
-=======
-function generaterandomrace() {
->>>>>>> 81a54d531d2e753932613eee49cebaba23259b24
 
   var randomindex = Math.floor(Math.random() * 9);
   document.getElementById('b').textContent = racearray[randomindex];
@@ -235,7 +231,7 @@ function handlesubmit(e) {
   // alert('You chose Race: ' + raceoptions[raceoptions.length-1] + ' \n You chose class: '+ classoptions[classoptions.length-1]);
  
 
-  var like = window.confirm('Your Race is: <span color=red>'+ raceoptions[raceoptions.length - 1] +
+  var like = window.confirm('Your Race is: '+ raceoptions[raceoptions.length - 1] +
     ' \n Your Class is: ' + classoptions[classoptions.length - 1] +
     '\n Your Background is: ' + backgroundoptions[backgroundoptions.length - 1] +
     '\n Your Alignment is: '  + alignmentoptions[alignmentoptions.length - 1] +
