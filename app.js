@@ -22,9 +22,9 @@ var racearray = [
 
 // document.getElementById('randomrace').addEventListener('click', generaterandomrace);
 
-function generaterandomrace() {
-  document.getElementById('randomrace').addEventListener('click', generaterandomrace);
 
+  document.getElementById('randomrace').addEventListener('click', generaterandomrace);
+function generaterandomrace() {
 
   var randomindex = Math.floor(Math.random() * 9);
   document.getElementById('b').textContent = racearray[randomindex];
