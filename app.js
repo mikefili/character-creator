@@ -1,3 +1,4 @@
+'use-strict';
 
 // var result=[];
 var raceoptions = [];
@@ -23,8 +24,8 @@ var racearray = [
 // document.getElementById('randomrace').addEventListener('click', generaterandomrace);
 
 
-  document.getElementById('randomrace').addEventListener('click', generaterandomrace);
-  function generaterandomrace() {
+document.getElementById('randomrace').addEventListener('click', generaterandomrace);
+function generaterandomrace() {
 
   var randomindex = Math.floor(Math.random() * 9);
   document.getElementById('b').textContent = racearray[randomindex];
@@ -43,7 +44,6 @@ function showrace() {
 }
 
 showrace();
-
 
 //chose random class
 
@@ -100,9 +100,7 @@ var backgroundarray = [
   'They sailed on a seagoing vessel for years. In that time, they faced down mighty storms, monsters of the deep, and those who wanted to sink their craft to the bottomless depths. Their first love is the distant line of the horizon, but the time has come to try their hand at something new.',
   'War has been their life for as long as they care to remember. They trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. They might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war.',
   'They grew up on the streets alone, orphaned, and poor. They had no one to watch over them or to provide for them, so they learned to provide for themselves. They fought fiercely over food and kept a constant watch out for other desperate souls who might steal from them. They slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate. They’ve survived despite all odds, and did so through cunning, strength, speed, or some combination of each.'
-
 ];
-
 
 document.getElementById('randombackground').addEventListener('click', generaterandombackground);
 
@@ -114,9 +112,7 @@ function generaterandombackground() {
   document.getElementById('e').value = randomindex;
 
   backgroundoptions.push(document.getElementById('e').options[document.getElementById('e').selectedIndex].text);
-
 }
-
 
 function showBackground() {
 
@@ -124,21 +120,14 @@ function showBackground() {
   document.getElementById('f').textContent = backgroundarray[selectedItem];
 
   backgroundoptions.push(document.getElementById('e').options[document.getElementById('e').selectedIndex].text);
-
 }
 
 showBackground();
 
-
-
-
 //randomize-all button at the top
-
 
 document.getElementById('randomize-all').addEventListener('click', generateAllclasses);
 function generateAllclasses() {
-  
-
 
   // var selectedclass=document.getElementById('c').value;
   // document.getElementById('d').value=classarray[selectedclass];
@@ -150,8 +139,6 @@ function generateAllclasses() {
   generaterandombackground();
   generaterandomalignment();
 }
-
-
 
 //pick one button from 9 options;
 
@@ -174,21 +161,15 @@ for (var i = 0; i < buttonel.length; i++) {
     }
     alignmentoptions.push(buttonel[n].innerHTML);
   };
-
-
-
 }
-
-
 
 //randomly pick one button
 document.getElementById('randomalignment').addEventListener('click', generaterandomalignment);
 
 function generaterandomalignment() {
 
-
   var buttonel = document.querySelectorAll('.alel');
-  
+
   var randomindexnumber = Math.floor(Math.random() * 9);
   for (var i = 0; i < buttonel.length; i++) {
 
@@ -200,13 +181,7 @@ function generaterandomalignment() {
   alignmentoptions.push(buttonel[n].innerHTML);
 }
 
-
-
-
-
-
 //try to use local storage to save data user pick
-
 
 function savedata() {
 
@@ -216,12 +191,7 @@ function savedata() {
   localStorage.setItem('alignment', JSON.stringify(alignmentoptions));
 }
 
-
-
-
-
 //submit button
-
 
 document.getElementById('submitbutton').addEventListener('click', handlesubmit);
 
@@ -229,13 +199,12 @@ function handlesubmit(e) {
   e.preventDefault();
 
   // alert('You chose Race: ' + raceoptions[raceoptions.length-1] + ' \n You chose class: '+ classoptions[classoptions.length-1]);
- 
 
   var like = window.confirm('Your Race is: '+ raceoptions[raceoptions.length - 1] +
     ' \n Your Class is: ' + classoptions[classoptions.length - 1] +
     '\n Your Background is: ' + backgroundoptions[backgroundoptions.length - 1] +
-    '\n Your Alignment is: '  + alignmentoptions[alignmentoptions.length - 1] +
-    '\nDo you like what we chose for you?');
+    '\n Your Alignment is: ' + alignmentoptions[alignmentoptions.length - 1] +
+    '\nAre you happy with these options?');
   if (like === true) {
     savedata();
     window.location.href = 'result.html';
@@ -246,6 +215,4 @@ function handlesubmit(e) {
     location.reload();
     localStorage.clear();
   }
-
 }
-
