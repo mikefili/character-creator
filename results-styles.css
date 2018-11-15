@@ -8,6 +8,11 @@ body {
   background-repeat: no-repeat;
 }
 
+a {
+  font-size: 1.5vw;
+  font-variant: small-caps;
+}
+
 nav {
   margin: 0;
   padding: 0;
