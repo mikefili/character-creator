@@ -79,7 +79,7 @@ header * nav {
 #sidebar-nav-aboutus {
   float: left;
   width: 10vw;
-  height: 85vw;
+  height: 110vw;
   background-color: rgba(211, 211, 211, 0.8);
   outline: 1px solid white;
 }
@@ -111,10 +111,11 @@ h1 {
   margin-top: 3vw;
   border: 1px solid white;
   border-radius: 2vw;
-  width: 70vw;
+  width: 65vw;
 }
 
 .bios {
+  vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 16vw;
@@ -128,30 +129,21 @@ h1 {
   background-color: rgba(200, 200, 200, 0.8);
 }
 
+.bios ul {
+  margin-top: 1vw;
+}
+
 .bios p {
   margin-top: 2vw;
   margin-bottom: 1vw;
   font-size: 1.5vw;
 }
 
-/* #one {
-  
-}
-#two {
-  
-}
-#three {
-  
-}
-#four {
-  
-} */
-
 #sidebar-img-aboutus {
   float: right;
   right: 0;
   width: 10vw;
-  height: 85vw;
+  height: 110vw;
   background-color: lightgray;
   opacity: 0.8;
   outline: 1px solid white;
