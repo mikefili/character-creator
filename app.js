@@ -200,19 +200,6 @@ function showAlignment(){
 showAlignment();
 
 
-//randomize-all button at the top
-
-document.getElementById('randomize-all').addEventListener('click', generateAllclasses);
-function generateAllclasses() {
-
-  generaterandomrace();
-  generaterandomclass();
-  generaterandombackground();
-  generaterandomalignment();
-}
-
-
-
 //try to use local storage to save data user pick
 
 function savedata() {
