@@ -172,6 +172,8 @@ function generaterandomalignment() {
 
 
 //pick one button from 9 options;
+
+
 function showAlignment(){
   var buttonel = document.querySelectorAll('.alel');
   for (var i = 0; i < buttonel.length; i++) {
@@ -187,7 +189,7 @@ function showAlignment(){
         buttonel[n].setAttribute('isAct', '0');
 
         this.setAttribute('isAct', '1');
-        n = this.index;
+        n=this.index;
       }
       alignmentoptions.push(buttonel[n].innerHTML);
     };

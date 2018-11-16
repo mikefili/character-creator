@@ -34,7 +34,7 @@
               <label>Name: <input name="nameInput" type="text" id="name"/> </label>
             </div>
             <div id="age-div">
-              <label>Age: <input name="ageInput" type="number"  min ="1" id="age"/> </label>
+              <label>Age: <input name="ageInput" type="number" min="1" onkeyup="this.value=parseInt(this.value);if (isNaN(this.value) || this.value<=0){alert('plese enter a number and greater than 0!');this.reload();};"id="age"/> </label>
             </div>
             <div id="gender-div">
               <label>Gender: </label>
