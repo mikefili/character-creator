@@ -67,7 +67,7 @@ function showCharacterImage() {
 
   else {
 
-    pel.textContent = 'Name: ' + nameinfo.value;  
+    pel.textContent = 'Name: ' + nameinfo.value;
     el.appendChild(pel);
   }
 
@@ -75,6 +75,7 @@ function showCharacterImage() {
   var eel = document.getElementById('ageinformation');
   var ageinfo = document.getElementById('age');
   var ppel = document.createElement('p');
+
 
   if(ppel.textContent!==null){
 
@@ -148,7 +149,7 @@ function showCharacterImage() {
   }
 
   else {
-  
+
     charImage.setAttribute('src', charImagePath);
     charImage.setAttribute('id', 'character-image');
 
