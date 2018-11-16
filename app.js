@@ -1,16 +1,12 @@
 'use-strict';
 
-// var result=[];
+//var result=[];
 var raceoptions = [];
 var classoptions = [];
 var backgroundoptions = [];
 var alignmentoptions = [];
 
-
-
-//randomize-all button at the top
-
-
+//Randomize-all button at the top
 document.getElementById('randomize-all').addEventListener('click', generateAllclasses);
 function generateAllclasses() {
   generaterandomrace();
@@ -18,7 +14,6 @@ function generateAllclasses() {
   generaterandombackground();
   generaterandomalignment();
 }
-
 
 var racearray = [
   'Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs—these common threads unite all dwarves.',
@@ -34,24 +29,18 @@ var racearray = [
 // 'a' 'c' 'e'  are ids for input textarea.you can find them in index.html
 //  'b'  'd'  'f' are ids for <select> you can find them in index.html
 
-//chose random race
-
-
-
-
+//Generate random character race
 document.getElementById('randomrace').addEventListener('click', generaterandomrace);
 function generaterandomrace() {
-
   var randomindex = Math.floor(Math.random() * 9);
   document.getElementById('b').textContent = racearray[randomindex];
   document.getElementById('a').value = randomindex;
   raceoptions.push(document.getElementById('a').options[document.getElementById('a').selectedIndex].text);
 }
 
-//chose race
-// var racepick;
+//Chose character race
+//var racepick;
 function showrace() {
-
   var selectedrace = document.getElementById('a').value;
   document.getElementById('b').textContent = racearray[selectedrace];
   // return racepick=racearray[selectedrace];
@@ -59,8 +48,6 @@ function showrace() {
 }
 
 showrace();
-
-
 
 var classarray = [
   'A fierce warrior of primitive background who can enter a battle rage',
@@ -75,34 +62,24 @@ var classarray = [
   'A spellcaster who draws on inherent magic from a gift or bloodline',
   'A wielder of magic that is derived from a bargain with an extraplanar entity',
   'A scholarly magic-user capable of manipulating the structures of reality'
-
 ];
 
-//chose random class
+//Generate random character class
 document.getElementById('randomclass').addEventListener('click', generaterandomclass);
-
 function generaterandomclass() {
-
   var randomindex = Math.floor(Math.random() * 12);
   document.getElementById('d').textContent = classarray[randomindex];
   document.getElementById('c').value = randomindex;
-
   classoptions.push(document.getElementById('c').options[document.getElementById('c').selectedIndex].text);
 }
 
-//chose class
-
+//Chose character class
 function showclass() {
-
   var selectedclass = document.getElementById('c').value;
   document.getElementById('d').textContent = classarray[selectedclass];
-
   classoptions.push(document.getElementById('c').options[document.getElementById('c').selectedIndex].text);
-
 }
 showclass();
-
-
 
 var backgroundarray = [
   'They have spent their life in the service of a temple to a specific god or pantheon of gods. They act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. They are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power.',
@@ -119,61 +96,40 @@ var backgroundarray = [
   'They grew up on the streets alone, orphaned, and poor. They had no one to watch over them or to provide for them, so they learned to provide for themselves. They fought fiercely over food and kept a constant watch out for other desperate souls who might steal from them. They slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate. They’ve survived despite all odds, and did so through cunning, strength, speed, or some combination of each.'
 ];
 
-
-//Generate random background
-
+//Generate random character background
 document.getElementById('randombackground').addEventListener('click', generaterandombackground);
-
 function generaterandombackground() {
-
   var randomindex = Math.floor(Math.random() * backgroundarray.length);
-
   document.getElementById('f').textContent = backgroundarray[randomindex];
   document.getElementById('e').value = randomindex;
-
   backgroundoptions.push(document.getElementById('e').options[document.getElementById('e').selectedIndex].text);
 }
 
-
-//chose background
-
+//Chose character background
 function showBackground() {
-
   var selectedItem = document.getElementById('e').value;
   document.getElementById('f').textContent = backgroundarray[selectedItem];
-
   backgroundoptions.push(document.getElementById('e').options[document.getElementById('e').selectedIndex].text);
 }
 
 showBackground();
 
-
-
-//intial button index
+//Set intial button index to 0
 var n = 0;
-//randomly pick one button
+//Randomly pick one button
 document.getElementById('randomalignment').addEventListener('click', generaterandomalignment);
-
 function generaterandomalignment() {
-
   var buttonel = document.querySelectorAll('.alel');
-
   var randomindexnumber = Math.floor(Math.random() * 9);
   for (var i = 0; i < buttonel.length; i++) {
-
     buttonel[i].setAttribute('isAct', '0');
   }
-
   n = randomindexnumber;
   buttonel[randomindexnumber].setAttribute('isAct', '1');
   alignmentoptions.push(buttonel[n].innerHTML);
 }
 
-
-
-//pick one button from 9 options;
-
-
+//Pick one alignment from the 9 options;
 function showAlignment(){
   var buttonel = document.querySelectorAll('.alel');
   for (var i = 0; i < buttonel.length; i++) {
@@ -183,40 +139,30 @@ function showAlignment(){
       var isAct = this.getAttribute('isAct');
       if (Number(isAct)===1) {
         this.setAttribute('isAct', '0');
-      }
-      else {
-
+      } else {
         buttonel[n].setAttribute('isAct', '0');
-
         this.setAttribute('isAct', '1');
         n=this.index;
       }
       alignmentoptions.push(buttonel[n].innerHTML);
     };
-
-
-
   }
-
 }
 
 showAlignment();
 
-
-//try to use local storage to save data user pick
-
+//Use local storage to save user's selected character information
 function savedata() {
-
   localStorage.setItem('race', JSON.stringify(raceoptions));
   localStorage.setItem('class', JSON.stringify(classoptions));
   localStorage.setItem('background', JSON.stringify(backgroundoptions));
   localStorage.setItem('alignment', JSON.stringify(alignmentoptions));
 }
 
-//submit button
-
+//Generate submit button
 document.getElementById('submitbutton').addEventListener('click', handlesubmit);
 
+//Generate confirmation alert to confirm user wishes to proceed with current selections
 function handlesubmit(e) {
   e.preventDefault();
   var like = window.confirm('Your Race is: '+ raceoptions[raceoptions.length - 1] +
@@ -228,10 +174,7 @@ function handlesubmit(e) {
   if (like === true) {
     savedata();
     window.location.href = 'result.html';
-  }
-  else {
-
-    // document.write('ok no worries!');
+  } else {
     location.reload();
     localStorage.clear();
   }

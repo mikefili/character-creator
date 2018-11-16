@@ -109,9 +109,9 @@ h1 {
 
 #team-pic {
   margin-top: 3vw;
-  border: 1px solid white;
+  border: 5vw solid rgba(200, 200, 200, 0.8);
   border-radius: 2vw;
-  width: 65vw;
+  width: 55vw;
 }
 
 .bios {
