@@ -85,9 +85,11 @@ function showCharacterImage() {
     eel.innerHTML='';
     ppel.textContent='Age: ' + ageinfo.value;
     eel.appendChild(ppel);
+    ageinfo.value='';
   } else {
     ppel.textContent='Age: ' + ageinfo.value;
     eel.appendChild(ppel);
+    ageinfo.value='';
   }
 
   //Show gender information
