@@ -57,7 +57,7 @@ function setlimitation(e){
   if(isNaN(ageinfo.value)||ageinfo.value<=0){
 
     alert('Please enter a number and greater than 0!');
-    ageinfo.reload();
+    ageinfo.value='';
   }
 }
 //Creating a submit button that shows the character image when clicked
@@ -80,6 +80,7 @@ function showCharacterImage() {
   }
 
   //Show age information
+ 
   var ppel = document.createElement('p');
   if (ppel.textContent!==null){
     eel.innerHTML='';
