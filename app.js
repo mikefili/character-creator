@@ -114,7 +114,7 @@ function showBackground() {
 showBackground();
 
 // Set intial button index to 0
-var n = 0;
+var formerindex= 0;
 // Randomly pick one button
 document.getElementById('randomalignment').addEventListener('click', generaterandomalignment);
 function generaterandomalignment() {
@@ -123,31 +123,32 @@ function generaterandomalignment() {
   for (var i = 0; i < buttonel.length; i++) {
     buttonel[i].setAttribute('isAct', '0');
   }
-  n = randomindexnumber;
+  formerindex= randomindexnumber;
   buttonel[randomindexnumber].setAttribute('isAct', '1');
-  alignmentoptions.push(buttonel[n].innerHTML);
+  alignmentoptions.push(buttonel[formerindex].innerHTML);
 }
 
 // Pick one alignment from the 9 options;
+var buttonel = document.querySelectorAll('.alel');
+
 function showAlignment(){
-  var buttonel = document.querySelectorAll('.alel');
   for (var i = 0; i < buttonel.length; i++) {
     buttonel[i].index = i;
     buttonel[i].setAttribute('isAct', '0');
-    buttonel[i].onclick = function () {
-      var isAct = this.getAttribute('isAct');
-      if (Number(isAct)===1) {
-        this.setAttribute('isAct', '0');
-      } else {
-        buttonel[n].setAttribute('isAct', '0');
-        this.setAttribute('isAct', '1');
-        n=this.index;
-      }
-      alignmentoptions.push(buttonel[n].innerHTML);
-    };
+    buttonel[i].addEventListener('click',changeattr);
   }
 }
-
+function changeattr() {
+  var isAct = this.getAttribute('isAct');
+  if (Number(isAct)===1) {
+    this.setAttribute('isAct', '0');
+  } else {
+    buttonel[formerindex].setAttribute('isAct', '0');
+    this.setAttribute('isAct', '1');
+    formerindex=this.index;
+  }
+  alignmentoptions.push(buttonel[formerindex].innerHTML);
+}
 showAlignment();
 
 // Use local storage to save user's selected character information

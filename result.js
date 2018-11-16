@@ -47,6 +47,19 @@ function generateRandomGender() {
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
 }
 
+//set limitation for numbers in the input area at least 1 
+var eel = document.getElementById('ageinformation');
+var ageinfo = document.getElementById('age');
+ageinfo.addEventListener('input',setlimitation);
+function setlimitation(e){
+  e.preventDefault();
+  ageinfo.value=parseInt(ageinfo.value);
+  if(isNaN(ageinfo.value)||ageinfo.value<=0){
+
+    alert('Please enter a number and greater than 0!');
+    ageinfo.reload();
+  }
+}
 //Creating a submit button that shows the character image when clicked
 document.getElementById('submit').addEventListener('click', showCharacterImage);
 
@@ -67,10 +80,7 @@ function showCharacterImage() {
   }
 
   //Show age information
-  var eel = document.getElementById('ageinformation');
-  var ageinfo = document.getElementById('age');
   var ppel = document.createElement('p');
-
   if (ppel.textContent!==null){
     eel.innerHTML='';
     ppel.textContent='Age: ' + ageinfo.value;
