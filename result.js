@@ -1,4 +1,6 @@
-'use strict;';
+
+'use strict';
+
 
 var genderSelected;
 
@@ -43,31 +45,13 @@ function generateRandomGender() {
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
 }
 
+
+//submit button
 document.getElementById('submit').addEventListener('click', showCharacterImage);
 
 function showCharacterImage() {
-  //   //Set gender based on dropdown selection. Need to set anytime this is triggered by a dropdown change.
-  //   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
 
-  //   //delete current image if there is one before creating a new one
-  //   var existingImage = document.getElementById('character-image');
-  //   if (existingImage !== null) {
-  //     existingImage.parentNode.removeChild(existingImage);
-  //   }
-
-  //   //Set charImagePath to the folder that has the images and uses a filename race_gender.png
-  //   var charImagePath = `./assets/Character Images/${charRace}_${genderSelected}.png`;
-
-  //   //create a new element 'img' and add to character-details div
-  //   var charImage = document.createElement('img');
-  //   charImage.setAttribute('src', charImagePath);
-  //   charImage.setAttribute('id', 'character-image');
-
-  //   var divCharacterDetails = document.getElementById('character-details');
-  //   divCharacterDetails.appendChild(charImage);
-  //
-
-  // }
+  //show name information
   var el=document.getElementById('nameinformation');
   var nameinfo=document.getElementById('name');
 
@@ -83,11 +67,11 @@ function showCharacterImage() {
 
   else {
 
-    pel.textContent = 'Name: ' + nameinfo.value;
-    
+    pel.textContent = 'Name: ' + nameinfo.value;  
     el.appendChild(pel);
   }
 
+  //show age information
   var eel = document.getElementById('ageinformation');
   var ageinfo = document.getElementById('age');
   var ppel = document.createElement('p');
@@ -105,14 +89,9 @@ function showCharacterImage() {
     eel.appendChild(ppel);
   }
 
+  //show gender information
   var eeel = document.getElementById('genderinformation');
   var pppel = document.createElement('p');
-
-
-
-  // var genderinfo=document.getElementById('gender-dd');
-
-
 
   if(pppel.textContent!==null){
 
@@ -129,10 +108,10 @@ function showCharacterImage() {
   }
 
 
-
+  //show image
   genderSelected = document.getElementById('gender-dd').options[document.getElementById('gender-dd').selectedIndex].text;
   var existingImage = document.getElementById('character-image');
- 
+
   //Set charImagePath to the folder that has the images and uses a filename race_gender.png
   var charImagePath = `./assets/Character Images/${charRace}_${genderSelected}.png`;
   var divCharacterDetails = document.getElementById('character-details');
@@ -143,11 +122,8 @@ function showCharacterImage() {
   if (existingImage !== null) {
 
     existingImage.parentNode.removeChild(existingImage);
-   
-    
     charImage.setAttribute('src', charImagePath);
     charImage.setAttribute('id', 'character-image');
-  
     divCharacterDetails.appendChild(charImage);
 
     if (charAlignment === 'Lawful Good') {
@@ -172,7 +148,7 @@ function showCharacterImage() {
   }
 
   else {
-    
+  
     charImage.setAttribute('src', charImagePath);
     charImage.setAttribute('id', 'character-image');
 

@@ -6,6 +6,20 @@ var classoptions = [];
 var backgroundoptions = [];
 var alignmentoptions = [];
 
+
+
+//randomize-all button at the top
+
+
+document.getElementById('randomize-all').addEventListener('click', generateAllclasses);
+function generateAllclasses() {
+  generaterandomrace();
+  generaterandomclass();
+  generaterandombackground();
+  generaterandomalignment();
+}
+
+
 var racearray = [
   'Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs—these common threads unite all dwarves.',
   'Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They live in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry, and the good things of the world.',
@@ -19,9 +33,9 @@ var racearray = [
 
 //  'a' 'b' 'c' 'd' 'e' 'f' are ids for input textarea. you can find them in index.html
 
-//chose random race 
+//chose random race
 
-// document.getElementById('randomrace').addEventListener('click', generaterandomrace);
+
 
 
 document.getElementById('randomrace').addEventListener('click', generaterandomrace);
@@ -45,7 +59,7 @@ function showrace() {
 
 showrace();
 
-//chose random class
+
 
 var classarray = [
   'A fierce warrior of primitive background who can enter a battle rage',
@@ -62,6 +76,8 @@ var classarray = [
   'A scholarly magic-user capable of manipulating the structures of reality'
 
 ];
+
+//chose random class
 document.getElementById('randomclass').addEventListener('click', generaterandomclass);
 
 function generaterandomclass() {
@@ -85,7 +101,7 @@ function showclass() {
 }
 showclass();
 
-//Generate random background
+
 
 var backgroundarray = [
   'They have spent their life in the service of a temple to a specific god or pantheon of gods. They act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. They are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power.',
@@ -102,6 +118,9 @@ var backgroundarray = [
   'They grew up on the streets alone, orphaned, and poor. They had no one to watch over them or to provide for them, so they learned to provide for themselves. They fought fiercely over food and kept a constant watch out for other desperate souls who might steal from them. They slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate. They’ve survived despite all odds, and did so through cunning, strength, speed, or some combination of each.'
 ];
 
+
+//Generate random background
+
 document.getElementById('randombackground').addEventListener('click', generaterandombackground);
 
 function generaterandombackground() {
@@ -114,6 +133,9 @@ function generaterandombackground() {
   backgroundoptions.push(document.getElementById('e').options[document.getElementById('e').selectedIndex].text);
 }
 
+
+//chose background
+
 function showBackground() {
 
   var selectedItem = document.getElementById('e').value;
@@ -124,45 +146,10 @@ function showBackground() {
 
 showBackground();
 
-//randomize-all button at the top
 
-document.getElementById('randomize-all').addEventListener('click', generateAllclasses);
-function generateAllclasses() {
 
-  // var selectedclass=document.getElementById('c').value;
-  // document.getElementById('d').value=classarray[selectedclass];
-
-  // classoptions.push(classarray[selectedclass]);
-
-  generaterandomrace();
-  generaterandomclass();
-  generaterandombackground();
-  generaterandomalignment();
-}
-
-//pick one button from 9 options;
-
+//intial button index
 var n = 0;
-var buttonel = document.querySelectorAll('.alel');
-for (var i = 0; i < buttonel.length; i++) {
-  buttonel[i].index = i;
-  buttonel[i].setAttribute('isAct', '0');
-  buttonel[i].onclick = function () {
-    var isAct = this.getAttribute('isAct');
-    if (Number(isAct)) {
-      this.setAttribute('isAct', '0');
-    }
-    else {
-
-      buttonel[n].setAttribute('isAct', '0');
-
-      this.setAttribute('isAct', '1');
-      n = this.index;
-    }
-    alignmentoptions.push(buttonel[n].innerHTML);
-  };
-}
-
 //randomly pick one button
 document.getElementById('randomalignment').addEventListener('click', generaterandomalignment);
 
@@ -181,6 +168,51 @@ function generaterandomalignment() {
   alignmentoptions.push(buttonel[n].innerHTML);
 }
 
+
+
+//pick one button from 9 options;
+function showAlignment(){
+  var buttonel = document.querySelectorAll('.alel');
+  for (var i = 0; i < buttonel.length; i++) {
+    buttonel[i].index = i;
+    buttonel[i].setAttribute('isAct', '0');
+    buttonel[i].onclick = function () {
+      var isAct = this.getAttribute('isAct');
+      if (Number(isAct)===1) {
+        this.setAttribute('isAct', '0');
+      }
+      else {
+
+        buttonel[n].setAttribute('isAct', '0');
+
+        this.setAttribute('isAct', '1');
+        n = this.index;
+      }
+      alignmentoptions.push(buttonel[n].innerHTML);
+    };
+
+
+
+  }
+
+}
+
+showAlignment();
+
+
+//randomize-all button at the top
+
+document.getElementById('randomize-all').addEventListener('click', generateAllclasses);
+function generateAllclasses() {
+
+  generaterandomrace();
+  generaterandomclass();
+  generaterandombackground();
+  generaterandomalignment();
+}
+
+
+
 //try to use local storage to save data user pick
 
 function savedata() {
@@ -197,14 +229,12 @@ document.getElementById('submitbutton').addEventListener('click', handlesubmit);
 
 function handlesubmit(e) {
   e.preventDefault();
-
-  // alert('You chose Race: ' + raceoptions[raceoptions.length-1] + ' \n You chose class: '+ classoptions[classoptions.length-1]);
-
   var like = window.confirm('Your Race is: '+ raceoptions[raceoptions.length - 1] +
     ' \n Your Class is: ' + classoptions[classoptions.length - 1] +
     '\n Your Background is: ' + backgroundoptions[backgroundoptions.length - 1] +
     '\n Your Alignment is: ' + alignmentoptions[alignmentoptions.length - 1] +
-    '\nAre you happy with these options?');
+    '\n Do you like what we chose for you?');
+
   if (like === true) {
     savedata();
     window.location.href = 'result.html';
